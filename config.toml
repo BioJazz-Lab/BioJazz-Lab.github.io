@@ -50,7 +50,7 @@ socials = [
 main_menu = [
     { en = "Home",         url = "",             key = "home",         pages = [] },
     { en = "Research",     url = "research",     key = "research",     pages = [] },
-    { en = "People",       url = "people",       key = "people",       pages = [] },
+    { en = "People",       url = "members",      key = "people",       pages = [] },
     { en = "Publications", url = "publications", key = "publications", pages = [] },
     { en = "News",         url = "news",         key = "news",         pages = [] },
     { en = "Join Us",      url = "join",         key = "join",         pages = [] },
