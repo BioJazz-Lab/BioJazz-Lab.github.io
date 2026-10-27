@@ -15,8 +15,8 @@ image_thumbnail = "img/people/placeholder.svg"
 links = [
     { name = "Song_Feng@baylor.edu", url = "mailto:Song_Feng@baylor.edu" },
     { name = "Baylor faculty profile", url = "https://biology.artsandsciences.baylor.edu/person/song-feng-phd" },
-    # TODO (Song): add Google Scholar / ORCID / GitHub links, e.g.
-    # { name = "Google Scholar", url = "https://scholar.google.com/citations?user=XXXX" },
+    { name = "Google Scholar", url = "https://scholar.google.com/citations?user=EVwMn_EAAAAJ&hl=en" },
+    # TODO (Song): add ORCID / GitHub links here if you like.
 ]
 +++
 
@@ -44,6 +44,8 @@ Los Alamos National Laboratory.
 - Office: B.207 Baylor Science Building
 - Phone: (254) 710-2911
 
-## Publications
+## Selected publications
+
+For a complete list, see [Google Scholar](https://scholar.google.com/citations?user=EVwMn_EAAAAJ&hl=en).
 
 {{<list_publications member="feng" />}}

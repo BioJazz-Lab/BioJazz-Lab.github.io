@@ -40,8 +40,7 @@ mobile_close_menu_button = { en = "Close menu" }
 # mastodon, matrix, slack, x, youtube  (files in static/social_icons)
 socials = [
     { name = "GitHub", url = "https://github.com/BioJazz-Lab", icon = "github" },
-    # TODO: add your Google Scholar profile URL, then uncomment:
-    # { name = "Google Scholar", url = "https://scholar.google.com/citations?user=XXXX", icon = "google-scholar" },
+    { name = "Google Scholar", url = "https://scholar.google.com/citations?user=EVwMn_EAAAAJ&hl=en", icon = "google-scholar" },
 ]
 
 # --- Navigation ----------------------------------------------------------------
