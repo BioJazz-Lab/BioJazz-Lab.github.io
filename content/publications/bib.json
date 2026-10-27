@@ -118,6 +118,18 @@
       "bibtex": "@article{feng2024decomprolute,\n  title = {Decomprolute is a benchmarking platform designed for multiomics-based tumor deconvolution},\n  author = {Feng, Song and Calinawan, Anna and Pugliese, Pietro and Wang, Pei and Ceccarelli, Michele and Petralia, Francesca and Gosline, Sara J. C.},\n  journal = {Cell Reports Methods},\n  year = {2024},\n  volume = {4},\n  number = {2},\n  pages = {100708},\n  doi = {10.1016/j.crmeth.2024.100708}\n}"
     },
     {
+      "title": "Targeted Quantification of Protein Phosphorylation and Its Contributions towards Mathematical Modeling of Signaling Pathways",
+      "year": 2023,
+      "author": "Panshak P. Dakup, Song Feng, Tujin Shi, Jon M. Jacobs, H. Steven Wiley, Wei-Jun Qian",
+      "cite": "Molecules, 28(3): 1143",
+      "doi": "10.3390/molecules28031143",
+      "category": [
+        "Proteomics & PTMs",
+        "Signaling & network evolution"
+      ],
+      "bibtex": "@article{dakup2023phosphorylation,\n  title = {Targeted Quantification of Protein Phosphorylation and Its Contributions towards Mathematical Modeling of Signaling Pathways},\n  author = {Dakup, Panshak P. and Feng, Song and Shi, Tujin and Jacobs, Jon M. and Wiley, H. Steven and Qian, Wei-Jun},\n  journal = {Molecules},\n  year = {2023},\n  volume = {28},\n  number = {3},\n  pages = {1143},\n  doi = {10.3390/molecules28031143}\n}"
+    },
+    {
       "title": "Hypergraph models of biological networks to identify genes critical to pathogenic viral response",
       "year": 2021,
       "author": "Song Feng, Emily Heath, Brett Jefferson, Cliff Joslyn, Henry Kvinge, Hugh D. Mitchell, Brenda Praggastis, Amie J. Eisfeld, Amy C. Sims, Larissa B. Thackray, Shufang Fan, Kevin B. Walters, Peter J. Halfmann, Danielle Westhoff-Smith, Qing Tan, Vineet D. Menachery, Timothy P. Sheahan, Adam S. Cockrell, Jacob F. Kocher, Kelly G. Stratton, Natalie C. Heller, Lisa M. Bramer, Michael S. Diamond, Ralph S. Baric, Katrina M. Waters, Yoshihiro Kawaoka, Jason E. McDermott, Emilie Purvine",

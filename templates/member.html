@@ -20,8 +20,8 @@
   </div>
 </div>
 <script>
-  const bibContainer = document.getElementById("bib-container")
+  // Publication lists are written inside the bio; move them below it, at full width.
   const memberContainer = document.getElementById("member-container")
-  if (bibContainer) { memberContainer.appendChild(bibContainer) }
+  document.querySelectorAll("#member-container article .bj-pubs").forEach(el => memberContainer.appendChild(el))
 </script>
 {% endblock %}

@@ -1,0 +1,33 @@
+{
+  "categories": [
+    "Multi-omics",
+    "Proteomics & PTMs",
+    "Signaling & network evolution"
+  ],
+  "bibs": [
+    {
+      "title": "Cell State Transitions Drive Transcriptome-Proteome Alignment in a Minimal Photoautotroph",
+      "year": 2026,
+      "author": "Jordan Rozum, Xiaolu Li, Young-Mo Kim, Zachary Johnson, William Sineath, Marci R. Garcia, Natalie C. Sadler, Pavlo Bohutskyi, Margaret S. Cheung, Wei-Jun Qian, Song Feng",
+      "cite": "bioRxiv (preprint)",
+      "doi": "10.64898/2026.10.20.760503",
+      "category": [
+        "Multi-omics",
+        "Proteomics & PTMs"
+      ],
+      "bibtex": "@article{rozum2026celltransitions,\n  title = {Cell State Transitions Drive Transcriptome-Proteome Alignment in a Minimal Photoautotroph},\n  author = {Rozum, Jordan and Li, Xiaolu and Kim, Young-Mo and Johnson, Zachary and Sineath, William and Garcia, Marci R. and Sadler, Natalie C. and Bohutskyi, Pavlo and Cheung, Margaret S. and Qian, Wei-Jun and Feng, Song},\n  journal = {bioRxiv (preprint)},\n  year = {2026},\n  doi = {10.64898/2026.10.20.760503}\n}"
+    },
+    {
+      "title": "A Phosphoproteomics Data Resource for Systems-level Modeling of Kinase Signaling Networks",
+      "year": 2023,
+      "author": "Song Feng, James A. Sanford, Thomas Weber, Chelsea M. Hutchinson-Bunch, Panshak P. Dakup, Vanessa L. Paurus, Kwame Attah, Herbert M. Sauro, Wei-Jun Qian, H. Steven Wiley",
+      "cite": "bioRxiv (preprint)",
+      "doi": "10.1101/2023.08.03.551714",
+      "category": [
+        "Proteomics & PTMs",
+        "Signaling & network evolution"
+      ],
+      "bibtex": "@article{feng2023phosphoproteomics,\n  title = {A Phosphoproteomics Data Resource for Systems-level Modeling of Kinase Signaling Networks},\n  author = {Feng, Song and Sanford, James A. and Weber, Thomas and Hutchinson-Bunch, Chelsea M. and Dakup, Panshak P. and Paurus, Vanessa L. and Attah, Kwame and Sauro, Herbert M. and Qian, Wei-Jun and Wiley, H. Steven},\n  journal = {bioRxiv (preprint)},\n  year = {2023},\n  doi = {10.1101/2023.08.03.551714}\n}"
+    }
+  ]
+}

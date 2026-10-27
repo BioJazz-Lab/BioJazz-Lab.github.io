@@ -1,390 +1,48 @@
 {#-
-  list_publications component: renders content/publications/bib.json as a filterable list.
-  Use it in Markdown content, e.g.
+  list_publications component: a publication list rendered by static/js/publications.js.
+  Several lists may appear on the same page.
+
+  Use it in Markdown content or in templates, e.g.
       {{<list_publications show_filters={true} filter_categories_heading="Filter by topic" />}}
       {{<list_publications member="feng" />}}     (only that member's papers in the lab list)
       {{<list_publications data_file="content/publications/members/zjohnson.json" />}}
-                                                  (a member's separate personal list)
-  Adapted from the researchlab theme's shortcode (MIT licence) for Zola 0.23+ / Tera 2.
+      {{<list_publications data_file="content/publications/preprints.json" />}}
+
+  data_file: a JSON file written by scripts/bib2json.py.
   The output is captured and blank lines are removed so that Markdown treats it as one HTML block.
 -#}
 {% component list_publications(data_file: string = "content/publications/bib.json", member: string = "", show_filters: bool = false, filter_categories_heading: string = "Select categories", filter_order_heading: string = "Order by", filter_order_by_year_heading: string = "Year", filter_order_by_title_heading: string = "Title") %}
 {%- set data = load_data(path=data_file) %}
-{%- set member_username = member %}
-{%- set html %}{% if data["categories"] %}
-<div id="bib-container" class="max-w-2xl mx-auto mt-4 mb-2">
-  {% if show_filters %}
-  <div class="flex pb-8 space-x-4">
-    <div class="relative flex-auto w-64">
-      <div
-        id="selectCategories"
-        class="border border-gray-300 bg-white rounded-lg px-4 py-2 flex items-center justify-between cursor-pointer"
-        onclick="toggleDropdownSelectCategories()"
-      >
-        <div id="selectedCategories" class="flex flex-wrap gap-2 text-gray-500">
-          {{filter_categories_heading}}
-        </div>
-        <svg
-          id="arrowIconSelectCategories"
-          class="w-5 h-5 transform size-6"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="m19.5 8.25-7.5 7.5-7.5-7.5"
-          />
-        </svg>
-      </div>
-
-      <ul
-        id="dropdownSelectCategories"
-        class="absolute border border-gray-300 bg-white rounded-lg mt-2 w-full max-h-40 overflow-y-auto shadow-lg hidden"
-      >
-        {% for category in data["categories"] %}
-        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
-          <input
-            type="checkbox"
-            id="{{category}}"
-            value="{{category}}"
-            class="mr-2"
-            onclick="updateSelectedItems('{{category}}')"
-          >
-          <label for="{{category}}" class="cursor-pointer w-full">{{category}}</label>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="relative flex-auto w-30">
-      <div
-        id="selectOrder"
-        class="border border-gray-300 bg-white rounded-lg px-4 py-2 flex items-center justify-between cursor-pointer"
-        onclick="toggleDropdownSelectOrder()"
-      >
-        <div id="selectedOrder" class="flex flex-wrap gap-2 text-gray-500">
-          {{filter_order_heading}}:
-          {{filter_order_by_year_heading}}
-        </div>
-        <svg
-          id="arrowIconSelectOrder"
-          class="w-5 h-5 transform size-6"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="m19.5 8.25-7.5 7.5-7.5-7.5"
-          />
-        </svg>
-      </div>
-
-      <ul
-        id="dropdownSelectOrder"
-        class="absolute border border-gray-300 bg-white rounded-lg mt-2 w-full max-h-40 overflow-y-auto shadow-lg hidden"
-      >
-        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
-          <input
-            type="button"
-            id="{{filter_order_by_year_heading}}"
-            class="hidden mr-2"
-            onclick="orderItems('{{filter_order_by_year_heading}}')"
-            value="year"
-          >
-          <label
-            for="{{filter_order_by_year_heading}}"
-            class="cursor-pointer w-full"
-            >{{filter_order_by_year_heading}}</label
-          >
-        </li>
-        <li class="px-4 py-2 flex items-center hover:bg-gray-100">
-          <input
-            type="button"
-            id="{{filter_order_by_title_heading}}"
-            class="hidden"
-            onclick="orderItems('{{filter_order_by_title_heading}}')"
-            value="title"
-          >
-          <label
-            for="{{filter_order_by_title_heading}}"
-            class="cursor-pointer w-full"
-            >{{filter_order_by_title_heading}}</label
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
-  {% endif %}
-  <div id="bib" class="grid gap-8"></div>
-
-  <!-- Modal -->
-  <div
-    id="bib-modal"
-    onclick="toggleModal(false)"
-    class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden"
-  >
-    <div onclick="event.stopPropagation()" class="bg-white rounded-lg shadow-lg p-4">
-      <div class="flex justify-between items-center space-x-4">
-        <h3 id="modal-title" class="text-lg font-semibold text-gray-900">BibTex</h3>
-        <button class="text-gray-500 hover:text-gray-900" onclick="toggleModal(false)">
-          <svg
-            class="w-5 h-5 size-6"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18 18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-      </div>
-      <hr>
-      <div class="mt-4 text-gray-700">
-        <pre><code id="bib-modal-code"></code></pre>
-      </div>
-    </div>
-  </div>
+{%- set members_map = load_data(path="content/publications/members_mapping.json") %}
+{#- Tag colours follow the lab list's tag order, so a tag has the same colour in every list. -#}
+{%- set lab_list = load_data(path="content/publications/bib.json") %}
+{%- set html %}
+<div class="bj-pubs max-w-2xl mx-auto mt-4 mb-2" data-member="{{ member }}" data-filters="{{ '1' if show_filters else '0' }}" data-members-url="{{ get_url(path='members') }}/">
+{%- if show_filters %}
+<div class="flex flex-wrap gap-4 pb-8">
+<details class="bj-pubs-cat relative flex-auto w-64">
+<summary class="bj-summary border border-gray-300 bg-white rounded-lg px-4 py-2 flex items-center justify-between cursor-pointer">
+<span class="bj-pubs-cat-label flex flex-wrap gap-2 text-gray-500" data-placeholder="{{ filter_categories_heading }}">{{ filter_categories_heading }}</span>
+<svg class="w-5 h-5 flex-none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" /></svg>
+</summary>
+<ul class="absolute z-10 border border-gray-300 bg-white rounded-lg mt-2 w-full max-h-64 overflow-y-auto shadow-lg">
+{%- for c in data.categories %}
+<li class="px-4 py-2 hover:bg-gray-100"><label class="flex items-center gap-2 cursor-pointer w-full"><input type="checkbox" value="{{ c }}">{{ c }}</label></li>
+{%- endfor %}
+</ul>
+</details>
+<label class="relative flex-auto w-40"><span class="sr-only">{{ filter_order_heading }}</span>
+<select class="bj-pubs-order w-full border border-gray-300 bg-white rounded-lg px-4 py-2 text-gray-500 cursor-pointer">
+<option value="year">{{ filter_order_heading }}: {{ filter_order_by_year_heading }}</option>
+<option value="title">{{ filter_order_heading }}: {{ filter_order_by_title_heading }}</option>
+</select></label>
 </div>
-
-<script>
-  function toggleModal(show, code) {
-    const modal = document.getElementById("bib-modal")
-    const modalCode = document.getElementById("bib-modal-code")
-    if (code) {
-      modalCode.textContent = code
-    }
-    modal.classList.toggle("hidden", !show)
-  }
-
-  const backgroundColors = [
-    "#e6f0ea", "#fff3d1", "#e8eef7", "#f3e8f5", "#e3f4f4", "#f6e9e4", "#eef0e1", "#ececec"
-  ]
-
-  const textColors = [
-    "#154734", "#6b4e00", "#1e3a5f", "#5b2a68", "#14524f", "#6b2d16", "#4a5214", "#333333"
-  ]
-
-  let categoryToColor = {}
-  let colorIndex = 0
-  const categoriesArray = JSON.parse('{{data["categories"] | json_encode() | safe}}')
-  categoriesArray.forEach(item => {
-    categoryToColor[item] = {
-      backgroundColor: backgroundColors[colorIndex],
-      textColor: textColors[colorIndex],
-    }
-    colorIndex += 1
-    if (colorIndex >= backgroundColors.length) {
-      colorIndex = 0
-    }
-  })
-
-  function setCategoryColor(category) {
-    const parentDiv = document.getElementById('bib')
-    const spans = parentDiv.querySelectorAll('span')
-    spans.forEach(span => {
-      span.style.backgroundColor = categoryToColor[span.innerText].backgroundColor
-      span.style.color = categoryToColor[span.innerText].textColor
-      span.classList.add("ring-1")
-      span.classList.add("ring-inset")
-      // Add cursor pointer and click handler to category spans
-      {% if show_filters == true %}
-        span.style.cursor = 'pointer'
-        span.onclick = () => updateSelectedItems(span.innerText)
-      {% endif %}
-    })
-  }
-
-  const dropdownSelectCategories = document.getElementById("dropdownSelectCategories")
-  const selectCategories = document.getElementById("selectCategories")
-  const selectedCategories = document.getElementById("selectedCategories")
-  const arrowIconSelectCategories = document.getElementById("arrowIconSelectCategories")
-
-  const dropdownSelectOrder = document.getElementById("dropdownSelectOrder")
-  const selectOrder = document.getElementById("selectOrder")
-  const selectedOrder = document.getElementById("selectedOrder")
-  const arrowIconSelectOrder = document.getElementById("arrowIconSelectOrder")
-
-  const selectedValues = []
-  let orderBy = "{{filter_order_by_year_heading}}"
-
-  // Reset checkboxes
-  const checkboxes = document.querySelectorAll('#dropdownSelectCategories input[type="checkbox"]')
-  checkboxes.forEach(checkbox => {
-    checkbox.checked = false
-  })
-
-  function toggleDropdownSelectCategories() {
-    dropdownSelectCategories.classList.toggle("hidden")
-    arrowIconSelectCategories.classList.toggle("rotate-180")
-  }
-
-  function toggleDropdownSelectOrder() {
-    dropdownSelectOrder.classList.toggle("hidden")
-    arrowIconSelectOrder.classList.toggle("rotate-180")
-  }
-
-  function updateSelectedItems(value) {
-    const index = selectedValues.indexOf(value)
-    const checkbox = document.querySelector(`input[value="${value}"]`)
-
-    if (index === -1) {
-      selectedValues.push(value)
-      if (checkbox) checkbox.checked = true
-    } else {
-      selectedValues.splice(index, 1)
-      if (checkbox) checkbox.checked = false
-    }
-
-    renderSelectedItems()
-    filterBibs()
-  }
-
-  function orderItems(value) {
-    selectedOrder.innerText = `{{filter_order_heading}}: ${value}`
-    orderBy = value
-    filterBibs()
-  }
-
-  function renderSelectedItems() {
-    if (selectedValues.length === 0) {
-      selectedCategories.innerHTML = "{{filter_categories_heading}}"
-      selectedCategories.classList.add("text-gray-500")
-    } else {
-      selectedCategories.innerHTML = selectedValues
-        .map(value => `<span class="ring-1 ring-inset inline-flex items-center rounded-md px-2 py-1 text-xs font-medium" style="background-color: ${categoryToColor[value].backgroundColor}; color: ${categoryToColor[value].textColor};">${value}</span>`)
-        .join(" ")
-      selectedCategories.classList.remove("text-gray-500")
-    }
-  }
-
-  function filterBibs() {
-    const filteredBibsContainer = document.getElementById("bib")
-
-    const filteredBibs = []
-    let bibJSON = {}
-    {% for bib in data["bibs"] %}
-      // Create the bibJSON object directly without parsing
-      bibJSON = {
-        title: "{{bib.title | safe}}",
-        year: {{bib.year}},
-        author: "{{bib.author | safe}}",
-        cite: "{{bib.cite | safe}}",
-        doi: "{{bib.doi | safe}}",
-        {% if bib.downloadUrl %}
-        downloadUrl: "{{bib.downloadUrl | safe}}",
-        {% endif %}
-        category: [{% for cat in bib.category %}"{{cat}}"{% if not loop.last %}, {% endif %}{% endfor %}],
-        bibtex: `{{bib.bibtex | safe}}`
-      }
-
-      if (selectedValues.length === 0) {
-        filteredBibs.push(bibJSON)
-      } else {
-        if (selectedValues.some(val => bibJSON.category.includes(val))) {
-          filteredBibs.push(bibJSON)
-        }
-      }
-    {% endfor %}
-
-    {% set membersMapData = load_data(path="content/publications/members_mapping.json") %}
-    const membersMap = JSON.parse(atob('{{membersMapData | json_encode() | base64_encode}}'))
-    const collator = new Intl.Collator("en", { sensitivity: "base" })
-
-    // Rest of your rendering code remains the same
-    if (filteredBibs.length) {
-      filteredBibsContainer.innerHTML = filteredBibs
-        .sort((a, b) => {
-          if (orderBy === "{{filter_order_by_year_heading}}") return b.year - a.year
-          if (orderBy === "{{filter_order_by_title_heading}}") return collator.compare(a.title, b.title)
-        })
-        .map(bib => {
-          let isMembersBib = ""
-          Object.entries(membersMap).forEach(([username, names]) => {
-            names.forEach(name => {
-              if (bib.author.includes(name)) {
-                if ("{{member_username}}" === username) {
-                  isMembersBib += "1"
-                } else {
-                  isMembersBib += "0"
-                }
-                let memberLink = "{{ get_url(path='members') | safe }}/" + username + "/"
-                bib.author = bib.author.replace(name, `<a href="${memberLink}">${name}</a>`)
-              }
-            })
-          })
-          if ("{{member_username}}" !== "") {
-            if (!isMembersBib.includes("1")) {
-              return ``
-            }
-          }
-
-          return `
-            <div class="bj-card">
-              <div class="p-4">
-                <h3 class="text-lg font-semibold" style="color: var(--bj-green);">${bib.title}</h3>
-                <br />
-                <div>
-                ${bib.category.map(category => `<span class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium">${category}</span>`).join(" ")}
-                </div>
-                <br />
-                <p class="prose">${bib.author}</p>
-                <p class="text-gray-600 italic">${bib.cite} (${bib.year})</p>
-                <div class="flex justify-end space-x-4">
-                  <button onclick="toggleModal(true, ${"`"+bib.bibtex+"`"})" class="inline-flex items-center">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
-                    </svg>
-                  </button>
-                  ${bib.downloadUrl ? `
-                    <a href="${bib.downloadUrl}" download class="inline-flex items-center">
-                      <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                      </svg>
-                    </a>
-                  ` : ''}
-                  <a href="https://doi.org/${bib.doi}" target="_blank" class="inline-flex items-center">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          `
-        })
-        .join("")
-      setCategoryColor()
-    }
-  }
-      filterBibs()
-
-      document.addEventListener("click", (event) => {
-        if (selectCategories) {
-          if (!selectCategories.contains(event.target) && !dropdownSelectCategories.contains(event.target)) {
-            dropdownSelectCategories.classList.add("hidden")
-            arrowIconSelectCategories.classList.remove("rotate-180")
-          }
-        }
-        if (selectOrder) {
-          if (!selectOrder.contains(event.target) && !dropdownSelectOrder.contains(event.target)) {
-            dropdownSelectOrder.classList.add("hidden")
-            arrowIconSelectOrder.classList.remove("rotate-180")
-          }
-        }
-      })
-</script>
-{% endif %}{% endset %}
-{{ html | regex_replace(pattern="\n[ \t]*\n", rep="\n") | regex_replace(pattern="\n[ \t]*\n", rep="\n") | safe }}
+{%- endif %}
+<div class="bj-pubs-list grid gap-8"></div>
+<script type="application/json" class="bj-pubs-data">{{ data.bibs | json_encode | safe }}</script>
+<script type="application/json" class="bj-pubs-tags">{{ lab_list.categories | json_encode | safe }}</script>
+<script type="application/json" class="bj-pubs-members">{{ members_map | json_encode | safe }}</script>
+</div>
+{% endset %}
+{{ html | regex_replace(pattern="\n[ \t]*\n", rep="\n") | safe }}
 {% endcomponent list_publications %}

@@ -18,7 +18,7 @@ automatically (about 1 minute).
 | Home page text, headline, tagline | `content/_index.md` |
 | Research areas (one file per area) | `content/research/*.md` |
 | Lab members (one file per person) | `content/members/*.md` |
-| Publications | `content/publications/feng.bib` (BibTeX) |
+| Publications | `content/publications/feng.bib` (BibTeX); preprints in `content/publications/preprints/` |
 | News items (one file per item) | `content/news/YYYY-MM-DD-title.md` |
 | Join Us / Contact pages | `content/join.md`, `content/contact.md` |
 | Menu, colours, e-mail, social links | `config.toml` |
@@ -57,6 +57,13 @@ To link the new member's name in the publication list, add them to
 Then run `python3 scripts/bib2json.py` to update `bib.json`. GitHub Actions
 also runs this before every build, so a commit that changes only the `.bib`
 file still updates the site.
+
+**Add a preprint.** Put preprints in
+`content/publications/preprints/feng-preprints.bib` (use
+`journal = {bioRxiv (preprint)}`); they appear in the **Preprints** section of
+the Selected Publications page. When a preprint is published, move its entry to
+`content/publications/feng.bib` and update the journal details. The sections on
+that page are listed in `content/publications.md` under `[extra] sections`.
 
 **Give a member a personal publication list.** To show a member's own
 publications (for example, from before they joined) without mixing them into

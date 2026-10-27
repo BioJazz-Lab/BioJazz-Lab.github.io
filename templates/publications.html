@@ -1,15 +1,18 @@
-{#- Publications page; the list itself comes from the list_publications component. -#}
+{#- Selected Publications page. Intro text comes from content/publications.md;
+    each entry in its [extra] sections list becomes a heading + publication list. -#}
 {% extends "base.html" %}
 {% block content %}
-<div id="pub-container">
-  <div class="prose mx-auto">
-    <h1 class="text-3xl font-bold mt-4 mb-2">{{ page.title }}</h1>
-    {{ page.content | safe }}
-  </div>
+<div class="prose mx-auto">
+  <h1 class="text-3xl font-bold mt-4 mb-2">{{ page.title }}</h1>
+  {{ page.content | safe }}
 </div>
-<script>
-  const bibContainer = document.getElementById("bib-container")
-  const pubContainer = document.getElementById("pub-container")
-  if (bibContainer) { pubContainer.appendChild(bibContainer) }
-</script>
+{%- for s in page.extra.sections %}
+<section class="mt-12" id="{{ s.title | slugify }}">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="bj-section-title">{{ s.title }}</h2><div class="bj-rule"></div>
+    {%- if s.note %}<p class="mt-3 text-sm" style="color: var(--bj-muted);">{{ s.note }}</p>{% endif %}
+  </div>
+  {{<list_publications data_file={s.data_file} show_filters={s.show_filters or false} filter_categories_heading="Filter by topic" />}}
+</section>
+{%- endfor %}
 {% endblock content %}

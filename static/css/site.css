@@ -38,3 +38,8 @@ a.bj-card:hover, .bj-card.is-link:hover { transform: translateY(-3px); box-shado
 
 /* TODO marker for placeholder content — easy to spot, remove when filled in */
 .todo { background: #fff4d6; border: 1px dashed #e0a800; border-radius: .5rem; padding: .5rem .75rem; font-size: .9rem; color: #6b4e00; }
+
+/* Publication lists */
+.bj-summary { list-style: none; }
+.bj-summary::-webkit-details-marker { display: none; }
+.bj-pubs .bj-card h3 i { font-style: italic; }

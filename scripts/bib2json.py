@@ -3,6 +3,7 @@
 content/publications/bib.json, the format read by the researchlab theme's
 `list_publications` shortcode.
 
+Preprints in content/publications/preprints/*.bib become preprints.json.
 It also converts personal lists in content/publications/members/<username>.bib
 into members/<username>.json; these are shown only on that member's page and
 are never merged into the lab list.
@@ -163,7 +164,11 @@ def convert(bib_files, out_path):
 def main():
     # 1. Lab publications: every .bib directly in content/publications/ -> bib.json
     convert(sorted(BIB_DIR.glob("*.bib")), OUT)
-    # 2. Personal lists, kept separate from the lab list:
+    # 2. Preprints: every .bib in content/publications/preprints/ -> preprints.json
+    preprints = sorted((BIB_DIR / "preprints").glob("*.bib"))
+    if preprints:
+        convert(preprints, BIB_DIR / "preprints.json")
+    # 3. Personal lists, kept separate from the lab list:
     #    content/publications/members/<username>.bib -> members/<username>.json
     for f in sorted((BIB_DIR / "members").glob("*.bib")):
         convert([f], f.with_suffix(".json"))
