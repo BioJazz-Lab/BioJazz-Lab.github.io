@@ -14,7 +14,7 @@ members_categories = [
     { category = "pi",        name = "Principal Investigator" },
     { category = "postdoc",   name = "Postdoctoral Researchers" },
     { category = "grad",      name = "Graduate Students" },
-    { category = "undergrad", name = "Undergraduate Researchers" },
+    { category = "undergrad", name = "Undergraduates" },
     { category = "staff",     name = "Staff" },
     { category = "alumni",    name = "Alumni" },
 ]
