@@ -1,0 +1,201 @@
+{
+  "categories": [
+    "AI",
+    "Metabolic modeling",
+    "Modeling methods",
+    "Multi-omics",
+    "Protein structure",
+    "Proteomics & PTMs",
+    "Signaling & network evolution",
+    "Software & tools"
+  ],
+  "bibs": [
+    {
+      "title": "Aggregation Methods for Quantifying PTM and Structural Changes in Bottom-Up Proteomics",
+      "year": 2026,
+      "author": "Erik D. VonKaenel, Jordan C. Rozum, Tong Zhang, Kelly G. Stratton, Lisa M. Bramer, H. Steven Wiley, Wei-Jun Qian, Amy C. Sims, John T. Melchior, Song Feng",
+      "cite": "Journal of Proteome Research, 25(6): 3159–3167",
+      "doi": "10.1021/acs.jproteome.5c00782",
+      "category": [
+        "Proteomics & PTMs",
+        "Protein structure"
+      ],
+      "bibtex": "@article{vonkaenel2026aggregation,\n  title = {Aggregation Methods for Quantifying PTM and Structural Changes in Bottom-Up Proteomics},\n  author = {VonKaenel, Erik D. and Rozum, Jordan C. and Zhang, Tong and Stratton, Kelly G. and Bramer, Lisa M. and Wiley, H. Steven and Qian, Wei-Jun and Sims, Amy C. and Melchior, John T. and Feng, Song},\n  journal = {Journal of Proteome Research},\n  year = {2026},\n  volume = {25},\n  number = {6},\n  pages = {3159–3167},\n  doi = {10.1021/acs.jproteome.5c00782}\n}"
+    },
+    {
+      "title": "ProteoMeter: a pipeline for integrating multi-PTM and limited proteolysis data to reveal modification-structure coupling at the residue level",
+      "year": 2026,
+      "author": "Jordan C. Rozum, Amy C. Sims, Xiaolu Li, Snigdha Sarkar, Tong Zhang, John T. Melchior, Danielle Ciesielski, David D. Pollock, H. Steven Wiley, Wei-Jun Qian, Song Feng",
+      "cite": "NAR Genomics and Bioinformatics, 8(3): lqag073",
+      "doi": "10.1093/nargab/lqag073",
+      "category": [
+        "Proteomics & PTMs",
+        "Protein structure",
+        "Software & tools"
+      ],
+      "bibtex": "@article{rozum2026proteometer,\n  title = {ProteoMeter: a pipeline for integrating multi-PTM and limited proteolysis data to reveal modification-structure coupling at the residue level},\n  author = {Rozum, Jordan C. and Sims, Amy C. and Li, Xiaolu and Sarkar, Snigdha and Zhang, Tong and Melchior, John T. and Ciesielski, Danielle and Pollock, David D. and Wiley, H. Steven and Qian, Wei-Jun and Feng, Song},\n  journal = {NAR Genomics and Bioinformatics},\n  year = {2026},\n  volume = {8},\n  number = {3},\n  pages = {lqag073},\n  doi = {10.1093/nargab/lqag073}\n}"
+    },
+    {
+      "title": "Synergy and antagonism in a genome-scale model of metabolic hijacking by bacteriophages",
+      "year": 2026,
+      "author": "Jordan C. Rozum, William Sineath, Pavlo Bohutskyi, Jordan Quenneville, Doo Nam Kim, Connah Johnson, Angad P. Mehta, James Evans, David Pollock, Wei-Jun Qian, Margaret S. Cheung, Ruonan Wu, Song Feng",
+      "cite": "Science Advances, 12(14): eaeb7646",
+      "doi": "10.1126/sciadv.aeb7646",
+      "category": [
+        "Metabolic modeling"
+      ],
+      "bibtex": "@article{rozum2026phage,\n  title = {Synergy and antagonism in a genome-scale model of metabolic hijacking by bacteriophages},\n  author = {Rozum, Jordan C. and Sineath, William and Bohutskyi, Pavlo and Quenneville, Jordan and Kim, Doo Nam and Johnson, Connah and Mehta, Angad P. and Evans, James and Pollock, David and Qian, Wei-Jun and Cheung, Margaret S. and Wu, Ruonan and Feng, Song},\n  journal = {Science Advances},\n  year = {2026},\n  volume = {12},\n  number = {14},\n  pages = {eaeb7646},\n  doi = {10.1126/sciadv.aeb7646}\n}"
+    },
+    {
+      "title": "Thiol post-translational modifications modulate allosteric regulation of the OpcA–G6PDH complex through conformational gate control",
+      "year": 2026,
+      "author": "Hoshin Kim, Song Feng, Pavlo Bohutskyi, Xiaolu Li, Daniel Mejia-Rodriguez, Tong Zhang, Wei-Jun Qian, Margaret S. Cheung",
+      "cite": "Protein Science, 35(5): e70561",
+      "doi": "10.1002/pro.70561",
+      "category": [
+        "Proteomics & PTMs",
+        "Protein structure"
+      ],
+      "bibtex": "@article{kim2026opca,\n  title = {Thiol post-translational modifications modulate allosteric regulation of the OpcA–G6PDH complex through conformational gate control},\n  author = {Kim, Hoshin and Feng, Song and Bohutskyi, Pavlo and Li, Xiaolu and Mejia-Rodriguez, Daniel and Zhang, Tong and Qian, Wei-Jun and Cheung, Margaret S.},\n  journal = {Protein Science},\n  year = {2026},\n  volume = {35},\n  number = {5},\n  pages = {e70561},\n  doi = {10.1002/pro.70561}\n}"
+    },
+    {
+      "title": "Artificial Intelligence Transforming Post-Translational Modification Research",
+      "year": 2025,
+      "author": "Doo Nam Kim, Tianzhixi Yin, Tong Zhang, Alexandria K. Im, John R. Cort, Jordan C. Rozum, David Pollock, Wei-Jun Qian, Song Feng",
+      "cite": "Bioengineering, 12(1): 26",
+      "doi": "10.3390/bioengineering12010026",
+      "category": [
+        "Proteomics & PTMs",
+        "AI"
+      ],
+      "bibtex": "@article{kim2025aiptm,\n  title = {Artificial Intelligence Transforming Post-Translational Modification Research},\n  author = {Kim, Doo Nam and Yin, Tianzhixi and Zhang, Tong and Im, Alexandria K. and Cort, John R. and Rozum, Jordan C. and Pollock, David and Qian, Wei-Jun and Feng, Song},\n  journal = {Bioengineering},\n  year = {2025},\n  volume = {12},\n  number = {1},\n  pages = {26},\n  doi = {10.3390/bioengineering12010026}\n}"
+    },
+    {
+      "title": "Cell Population–resolved Multiomics Atlas of the Developing Lung",
+      "year": 2025,
+      "author": "Mereena G. Ushakumary, Song Feng, Gautam Bandyopadhyay, Heather Olson, Karl K. Weitz, Heidi L. Huyck, Cory Poole, Jeffrey M. Purkerson, Soumyaroop Bhattacharya, M. Cecilia Ljungberg, Thomas J. Mariani, Gail H. Deutsch, Ravi S. Misra, James P. Carson, Joshua N. Adkins, Gloria S. Pryhuber, Geremy Clair",
+      "cite": "American Journal of Respiratory Cell and Molecular Biology, 72(5): 484–495",
+      "doi": "10.1165/rcmb.2024-0105OC",
+      "category": [
+        "Multi-omics"
+      ],
+      "bibtex": "@article{ushakumary2025lung,\n  title = {Cell Population–resolved Multiomics Atlas of the Developing Lung},\n  author = {Ushakumary, Mereena G. and Feng, Song and Bandyopadhyay, Gautam and Olson, Heather and Weitz, Karl K. and Huyck, Heidi L. and Poole, Cory and Purkerson, Jeffrey M. and Bhattacharya, Soumyaroop and Ljungberg, M. Cecilia and Mariani, Thomas J. and Deutsch, Gail H. and Misra, Ravi S. and Carson, James P. and Adkins, Joshua N. and Pryhuber, Gloria S. and Clair, Geremy},\n  journal = {American Journal of Respiratory Cell and Molecular Biology},\n  year = {2025},\n  volume = {72},\n  number = {5},\n  pages = {484–495},\n  doi = {10.1165/rcmb.2024-0105OC}\n}"
+    },
+    {
+      "title": "Multi-Omics Reveals Temporal Scales of Carbon Metabolism in <i>Synechococcus elongatus</i> PCC 7942 Under Light Disturbance",
+      "year": 2025,
+      "author": "Connah G. M. Johnson, Zachary Johnson, Liam S. Mackey, Xiaolu Li, Natalie C. Sadler, Tong Zhang, Wei-Jun Qian, Pavlo Bohutskyi, Song Feng, Margaret S. Cheung",
+      "cite": "PRX Life, 3(3): 033017",
+      "doi": "10.1103/l2dp-kw2t",
+      "category": [
+        "Multi-omics",
+        "Metabolic modeling"
+      ],
+      "bibtex": "@article{johnson2025carbon,\n  title = {Multi-Omics Reveals Temporal Scales of Carbon Metabolism in Synechococcus elongatus PCC 7942 Under Light Disturbance},\n  author = {Johnson, Connah G. M. and Johnson, Zachary and Mackey, Liam S. and Li, Xiaolu and Sadler, Natalie C. and Zhang, Tong and Qian, Wei-Jun and Bohutskyi, Pavlo and Feng, Song and Cheung, Margaret S.},\n  journal = {PRX Life},\n  year = {2025},\n  volume = {3},\n  number = {3},\n  pages = {033017},\n  doi = {10.1103/l2dp-kw2t}\n}"
+    },
+    {
+      "title": "ProCaliper: functional and structural analysis, visualization, and annotation of proteins",
+      "year": 2025,
+      "author": "Jordan C. Rozum, Hunter Ufford, Alexandria K. Im, Tong Zhang, David D. Pollock, Doo Nam Kim, Song Feng",
+      "cite": "Bioinformatics Advances, 5(1): vbaf275",
+      "doi": "10.1093/bioadv/vbaf275",
+      "category": [
+        "Protein structure",
+        "Software & tools"
+      ],
+      "bibtex": "@article{rozum2025procaliper,\n  title = {ProCaliper: functional and structural analysis, visualization, and annotation of proteins},\n  author = {Rozum, Jordan C. and Ufford, Hunter and Im, Alexandria K. and Zhang, Tong and Pollock, David D. and Kim, Doo Nam and Feng, Song},\n  journal = {Bioinformatics Advances},\n  year = {2025},\n  volume = {5},\n  number = {1},\n  pages = {vbaf275},\n  doi = {10.1093/bioadv/vbaf275}\n}"
+    },
+    {
+      "title": "Decomprolute is a benchmarking platform designed for multiomics-based tumor deconvolution",
+      "year": 2024,
+      "author": "Song Feng, Anna Calinawan, Pietro Pugliese, Pei Wang, Michele Ceccarelli, Francesca Petralia, Sara J. C. Gosline",
+      "cite": "Cell Reports Methods, 4(2): 100708",
+      "doi": "10.1016/j.crmeth.2024.100708",
+      "category": [
+        "Multi-omics",
+        "Software & tools"
+      ],
+      "bibtex": "@article{feng2024decomprolute,\n  title = {Decomprolute is a benchmarking platform designed for multiomics-based tumor deconvolution},\n  author = {Feng, Song and Calinawan, Anna and Pugliese, Pietro and Wang, Pei and Ceccarelli, Michele and Petralia, Francesca and Gosline, Sara J. C.},\n  journal = {Cell Reports Methods},\n  year = {2024},\n  volume = {4},\n  number = {2},\n  pages = {100708},\n  doi = {10.1016/j.crmeth.2024.100708}\n}"
+    },
+    {
+      "title": "Hypergraph models of biological networks to identify genes critical to pathogenic viral response",
+      "year": 2021,
+      "author": "Song Feng, Emily Heath, Brett Jefferson, Cliff Joslyn, Henry Kvinge, Hugh D. Mitchell, Brenda Praggastis, Amie J. Eisfeld, Amy C. Sims, Larissa B. Thackray, Shufang Fan, Kevin B. Walters, Peter J. Halfmann, Danielle Westhoff-Smith, Qing Tan, Vineet D. Menachery, Timothy P. Sheahan, Adam S. Cockrell, Jacob F. Kocher, Kelly G. Stratton, Natalie C. Heller, Lisa M. Bramer, Michael S. Diamond, Ralph S. Baric, Katrina M. Waters, Yoshihiro Kawaoka, Jason E. McDermott, Emilie Purvine",
+      "cite": "BMC Bioinformatics, 22(1): 287",
+      "doi": "10.1186/s12859-021-04197-2",
+      "category": [
+        "Multi-omics",
+        "Modeling methods"
+      ],
+      "bibtex": "@article{feng2021hypergraph,\n  title = {Hypergraph models of biological networks to identify genes critical to pathogenic viral response},\n  author = {Feng, Song and Heath, Emily and Jefferson, Brett and Joslyn, Cliff and Kvinge, Henry and Mitchell, Hugh D. and Praggastis, Brenda and Eisfeld, Amie J. and Sims, Amy C. and Thackray, Larissa B. and Fan, Shufang and Walters, Kevin B. and Halfmann, Peter J. and Westhoff-Smith, Danielle and Tan, Qing and Menachery, Vineet D. and Sheahan, Timothy P. and Cockrell, Adam S. and Kocher, Jacob F. and Stratton, Kelly G. and Heller, Natalie C. and Bramer, Lisa M. and Diamond, Michael S. and Baric, Ralph S. and Waters, Katrina M. and Kawaoka, Yoshihiro and McDermott, Jason E. and Purvine, Emilie},\n  journal = {BMC Bioinformatics},\n  year = {2021},\n  volume = {22},\n  number = {1},\n  pages = {287},\n  doi = {10.1186/s12859-021-04197-2}\n}"
+    },
+    {
+      "title": "In Silico Evolution of Signaling Networks Using Rule-Based Models: Bistable Response Dynamics",
+      "year": 2019,
+      "author": "Song Feng, Orkun S. Soyer",
+      "cite": "In Modeling Biomolecular Site Dynamics (Methods in Molecular Biology), pp. 315–339",
+      "doi": "10.1007/978-1-4939-9102-0_15",
+      "category": [
+        "Signaling & network evolution"
+      ],
+      "bibtex": "@incollection{feng2019insilico,\n  title = {In Silico Evolution of Signaling Networks Using Rule-Based Models: Bistable Response Dynamics},\n  author = {Feng, Song and Soyer, Orkun S.},\n  booktitle = {Modeling Biomolecular Site Dynamics},\n  series = {Methods in Molecular Biology},\n  publisher = {Springer New York},\n  year = {2019},\n  pages = {315–339},\n  doi = {10.1007/978-1-4939-9102-0_15}\n}"
+    },
+    {
+      "title": "Prediction of Optimal Drug Schedules for Controlling Autophagy",
+      "year": 2019,
+      "author": "Afroza Shirin, Isaac S. Klickstein, Song Feng, Yen Ting Lin, William S. Hlavacek, Francesco Sorrentino",
+      "cite": "Scientific Reports, 9(1): 1428",
+      "doi": "10.1038/s41598-019-38763-9",
+      "category": [
+        "Signaling & network evolution",
+        "Modeling methods"
+      ],
+      "bibtex": "@article{shirin2019autophagy,\n  title = {Prediction of Optimal Drug Schedules for Controlling Autophagy},\n  author = {Shirin, Afroza and Klickstein, Isaac S. and Feng, Song and Lin, Yen Ting and Hlavacek, William S. and Sorrentino, Francesco},\n  journal = {Scientific Reports},\n  year = {2019},\n  volume = {9},\n  number = {1},\n  pages = {1428},\n  doi = {10.1038/s41598-019-38763-9}\n}"
+    },
+    {
+      "title": "Scaling methods for accelerating kinetic Monte Carlo simulations of chemical reaction networks",
+      "year": 2019,
+      "author": "Yen Ting Lin, Song Feng, William S. Hlavacek",
+      "cite": "The Journal of Chemical Physics, 150(24): 244101",
+      "doi": "10.1063/1.5096774",
+      "category": [
+        "Modeling methods"
+      ],
+      "bibtex": "@article{lin2019scaling,\n  title = {Scaling methods for accelerating kinetic Monte Carlo simulations of chemical reaction networks},\n  author = {Lin, Yen Ting and Feng, Song and Hlavacek, William S.},\n  journal = {The Journal of Chemical Physics},\n  year = {2019},\n  volume = {150},\n  number = {24},\n  pages = {244101},\n  doi = {10.1063/1.5096774}\n}"
+    },
+    {
+      "title": "Core signalling motif displaying multistability through multi-state enzymes",
+      "year": 2016,
+      "author": "Song Feng, Meritxell Sáez, Carsten Wiuf, Elisenda Feliu, Orkun S. Soyer",
+      "cite": "Journal of The Royal Society Interface, 13(123): 20160524",
+      "doi": "10.1098/rsif.2016.0524",
+      "category": [
+        "Signaling & network evolution"
+      ],
+      "bibtex": "@article{feng2016multistability,\n  title = {Core signalling motif displaying multistability through multi-state enzymes},\n  author = {Feng, Song and Sáez, Meritxell and Wiuf, Carsten and Feliu, Elisenda and Soyer, Orkun S.},\n  journal = {Journal of The Royal Society Interface},\n  year = {2016},\n  volume = {13},\n  number = {123},\n  pages = {20160524},\n  doi = {10.1098/rsif.2016.0524}\n}"
+    },
+    {
+      "title": "Enzyme Sequestration as a Tuning Point in Controlling Response Dynamics of Signalling Networks",
+      "year": 2016,
+      "author": "Song Feng, Julien F. Ollivier, Orkun S. Soyer",
+      "cite": "PLOS Computational Biology, 12(5): e1004918",
+      "doi": "10.1371/journal.pcbi.1004918",
+      "category": [
+        "Signaling & network evolution"
+      ],
+      "bibtex": "@article{feng2016sequestration,\n  title = {Enzyme Sequestration as a Tuning Point in Controlling Response Dynamics of Signalling Networks},\n  author = {Feng, Song and Ollivier, Julien F. and Soyer, Orkun S.},\n  journal = {PLOS Computational Biology},\n  year = {2016},\n  volume = {12},\n  number = {5},\n  pages = {e1004918},\n  doi = {10.1371/journal.pcbi.1004918}\n}"
+    },
+    {
+      "title": "BioJazz: <i>in silico</i> evolution of cellular networks with unbounded complexity using rule-based modeling",
+      "year": 2015,
+      "author": "Song Feng, Julien F. Ollivier, Peter S. Swain, Orkun S. Soyer",
+      "cite": "Nucleic Acids Research, 43(19): e123",
+      "doi": "10.1093/nar/gkv595",
+      "category": [
+        "Signaling & network evolution",
+        "Software & tools"
+      ],
+      "bibtex": "@article{feng2015biojazz,\n  title = {BioJazz: in silico evolution of cellular networks with unbounded complexity using rule-based modeling},\n  author = {Feng, Song and Ollivier, Julien F. and Swain, Peter S. and Soyer, Orkun S.},\n  journal = {Nucleic Acids Research},\n  year = {2015},\n  volume = {43},\n  number = {19},\n  pages = {e123},\n  doi = {10.1093/nar/gkv595}\n}"
+    }
+  ]
+}

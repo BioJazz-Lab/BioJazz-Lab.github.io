@@ -1,0 +1,15 @@
+{#- Publications page; the list itself comes from the list_publications component. -#}
+{% extends "base.html" %}
+{% block content %}
+<div id="pub-container">
+  <div class="prose mx-auto">
+    <h1 class="text-3xl font-bold mt-4 mb-2">{{ page.title }}</h1>
+    {{ page.content | safe }}
+  </div>
+</div>
+<script>
+  const bibContainer = document.getElementById("bib-container")
+  const pubContainer = document.getElementById("pub-container")
+  if (bibContainer) { pubContainer.appendChild(bibContainer) }
+</script>
+{% endblock content %}

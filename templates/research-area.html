@@ -1,0 +1,22 @@
+{#- A single research area (content/research/*.md). -#}
+{% extends "base.html" %}
+{% block content %}
+<article class="prose mx-auto">
+  <p class="bj-eyebrow"><a href="{{ get_url(path='research') }}/" style="text-decoration:none;">← Research</a></p>
+  <h1>{{ page.title }}</h1>
+  {%- if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+  {%- if page.extra.image %}<img src="{{ get_url(path=page.extra.image) }}" alt="" class="w-full rounded-lg">{% endif %}
+  {{ page.content | safe }}
+  {%- if page.extra.members %}
+  <h2>{{ config.extra.project_members_heading[lang] }}</h2>
+  <ul>
+    {%- set members = get_section(path="members/_index.md") %}
+    {%- for username in page.extra.members %}
+      {%- for m in members.pages %}{% if m.slug == username %}
+    <li><a href="{{ m.permalink }}">{{ m.extra.first_name }} {{ m.extra.last_name }}</a> — {{ m.extra.position }}</li>
+      {%- endif %}{% endfor %}
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</article>
+{% endblock %}

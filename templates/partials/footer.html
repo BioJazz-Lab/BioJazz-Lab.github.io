@@ -1,0 +1,33 @@
+{#- Site footer. -#}
+<footer style="background-color: {{config.extra.color_1}}; color: {{config.extra.color_3}};">
+  <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-8 grid gap-6 md:grid-cols-3 text-sm">
+    <div>
+      <p class="font-bold text-base">{{ config.title }}</p>
+      <p class="opacity-80 mt-1">Department of Biology<br>Baylor University<br>Waco, Texas</p>
+    </div>
+    <div class="space-y-1">
+      {%- if config.extra.email -%}
+        {%- set addr = config.extra.email.address -%}
+        {%- if addr is containing(pat="@") %}
+      <p><a class="underline" href="mailto:{{ addr }}" style="color: {{config.extra.color_3}};">{{ config.extra.email[lang] }}</a></p>
+        {%- else %}
+      <p><a class="underline" href="#" data-encoded-email="{{ addr }}" style="color: {{config.extra.color_3}};">{{ config.extra.email[lang] }}</a></p>
+      <script src="{{ get_url(path='js/decodeMail.js') }}" async></script>
+        {%- endif %}
+      {%- endif %}
+      <p><a class="underline" href="{{ config.extra.department_url }}" style="color: {{config.extra.color_3}};">Baylor Department of Biology</a></p>
+      <p><a class="underline" href="{{ get_url(path='atom.xml') }}" style="color: {{config.extra.color_3}};">News feed (Atom)</a></p>
+    </div>
+    <div class="md:text-right">
+      <div class="flex gap-4 md:justify-end">
+        {%- for social in config.extra.socials %}
+        <a href="{{ social.url | safe }}" target="_blank" rel="noopener"><img loading="lazy" alt="{{ social.name }}" title="{{ social.name }}" src="{{ get_url(path='social_icons/' ~ social.icon ~ '.svg') }}" class="w-5 h-5" style="filter: invert(1);"></a>
+        {%- endfor %}
+      </div>
+      <p class="opacity-80 mt-3">&copy; {{ now() | date(format="%Y") }} {{ config.title }}</p>
+      {%- if config.extra.credit_message %}
+      <p class="opacity-60 mt-1 text-xs">Built with <a class="underline" href="https://www.getzola.org/">Zola</a> and the <a class="underline" href="https://codeberg.org/plaublin/researchlab/">researchlab</a> theme</p>
+      {%- endif %}
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,66 @@
+# ============================================================================
+#  BioJazz Lab website — main configuration
+#  Built with Zola 0.23+ (https://www.getzola.org); design adapted from the
+#  "researchlab" theme (https://codeberg.org/plaublin/researchlab, MIT licence).
+#  Most day-to-day edits happen in content/ ; this file holds site-wide settings.
+# ============================================================================
+
+base_url = "https://biojazz-lab.github.io"
+title = "BioJazz Lab"
+description = "The BioJazz Lab at Baylor University studies the design principles of microbial physiology and communities by combining multi-omics with mechanistic, data-constrained computational models."
+default_language = "en"
+
+compile_sass = false
+build_search_index = false
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
+[markdown]
+smart_punctuation = true
+external_links_target_blank = true
+
+[extra]
+# --- Identity -----------------------------------------------------------------
+lab_subtitle = "Department of Biology · Baylor University"
+institution = { en = "BioJazz Lab, Department of Biology, Baylor University" }
+department_url = "https://biology.artsandsciences.baylor.edu/"
+logo = "img/logo.svg"
+favicon = "img/favicon.svg"
+
+# Contact e-mail shown in the footer. Base64-encoded to deter spam bots.
+# To change it:  printf 'new@baylor.edu' | base64
+email = { en = "Contact", address = "U29uZ19GZW5nQGJheWxvci5lZHU=" }
+
+# Labels used by the templates
+project_members_heading = { en = "People" }
+mobile_open_menu_button = { en = "Open main menu" }
+mobile_close_menu_button = { en = "Close menu" }
+
+# Footer icons. Available icons: github, gitlab, google-scholar, linkedin,
+# mastodon, matrix, slack, x, youtube  (files in static/social_icons)
+socials = [
+    { name = "GitHub", url = "https://github.com/BioJazz-Lab", icon = "github" },
+    # TODO: add your Google Scholar profile URL, then uncomment:
+    # { name = "Google Scholar", url = "https://scholar.google.com/citations?user=XXXX", icon = "google-scholar" },
+]
+
+# --- Navigation ----------------------------------------------------------------
+# url is relative to the site root. An item may have a `pages` list to become a
+# dropdown, e.g. pages = [ { en = "Graduate students", url = "join", key = "join-grad" } ]
+main_menu = [
+    { en = "Home",         url = "",             key = "home",         pages = [] },
+    { en = "Research",     url = "research",     key = "research",     pages = [] },
+    { en = "People",       url = "people",       key = "people",       pages = [] },
+    { en = "Publications", url = "publications", key = "publications", pages = [] },
+    { en = "News",         url = "news",         key = "news",         pages = [] },
+    { en = "Join Us",      url = "join",         key = "join",         pages = [] },
+    { en = "Contact",      url = "contact",      key = "contact",      pages = [] },
+]
+
+# --- Colours (Baylor green & gold) --------------------------------------------
+color_1 = "#154734"   # header / footer background
+color_2 = "#FFB81C"   # accent (active menu item, buttons)
+color_3 = "#ffffff"   # text on header / footer
+color_4 = "#5f7a6c"   # dividers, scroll-to-top button
+
+credit_message = true

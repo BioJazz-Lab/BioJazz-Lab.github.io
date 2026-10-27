@@ -1,0 +1,21 @@
+<button id="scrollUpBtn" class="hidden fixed bottom-32 right-5 p-3 rounded-full shadow-lg transition duration-300" style="background-color: {{config.extra.color_4}}; color: {{config.extra.color_3}};">
+    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+    </svg>
+</button>
+
+<script>
+    window.onscroll = function() {
+        const scrollUpBtn = document.getElementById("scrollUpBtn");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollUpBtn.style.display = "block";
+        } else {
+            scrollUpBtn.style.display = "none";
+        }
+    };
+
+    // Scroll to the top when the button is clicked
+    document.getElementById("scrollUpBtn").onclick = function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+</script>

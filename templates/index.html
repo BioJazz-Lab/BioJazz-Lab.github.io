@@ -1,0 +1,76 @@
+{#- Home page. Content comes from content/_index.md. -#}
+{% extends "base.html" %}
+{% block content %}
+<div class="max-w-screen-xl mx-auto">
+  <section class="bj-hero">
+    <img src="{{ get_url(path=section.extra.hero_image) }}" alt="">
+    <div class="bj-hero-text">
+      <p class="bj-eyebrow" style="color: {{ config.extra.color_2 }};">{{ section.extra.eyebrow }}</p>
+      <h1 class="mt-2">{{ section.extra.headline }}</h1>
+      <p class="mt-4 text-lg opacity-90">{{ section.extra.tagline }}</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a class="bj-btn bj-btn-gold" href="{{ get_url(path='research') }}/">Our research</a>
+        <a class="bj-btn" style="background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.4);" href="{{ get_url(path='join') }}/">Join the lab</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-14 grid gap-10 lg:grid-cols-3">
+    <div class="lg:col-span-2 prose max-w-none">
+      {{ section.content | safe }}
+    </div>
+    {%- set pi = get_page(path="members/feng.md") %}
+    <aside class="bj-card p-6 h-fit self-start">
+      <p class="bj-eyebrow">Principal Investigator</p>
+      <div class="flex items-center gap-4 mt-3">
+        <img class="w-20 h-20 rounded-full object-cover" src="{{ get_url(path=pi.extra.image_thumbnail) }}" alt="{{ pi.extra.first_name }} {{ pi.extra.last_name }}">
+        <div>
+          <p class="font-bold text-lg">{{ pi.extra.first_name }} {{ pi.extra.last_name }}, Ph.D.</p>
+          <p class="text-sm" style="color: var(--bj-muted);">{{ pi.extra.position }}</p>
+        </div>
+      </div>
+      <p class="mt-4 text-sm" style="color: var(--bj-muted);">{{ pi.description }}</p>
+      <a class="bj-btn mt-5" href="{{ pi.permalink }}">About the PI</a>
+    </aside>
+  </section>
+
+  {%- set research = get_section(path="research/_index.md") %}
+  <section class="mt-16">
+    <h2 class="bj-section-title">Research areas</h2><div class="bj-rule"></div>
+    <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {%- for area in research.pages %}
+      <a href="{{ area.permalink }}" class="bj-card block">
+        {%- if area.extra.image %}<img src="{{ get_url(path=area.extra.image) }}" alt="" class="w-full h-36 object-cover">{% endif %}
+        <div class="p-4">
+          <h3 class="font-semibold text-base" style="color: var(--bj-green);">{{ area.title }}</h3>
+          <p class="mt-2 text-sm" style="color: var(--bj-muted);">{{ area.description }}</p>
+        </div>
+      </a>
+      {%- endfor %}
+    </div>
+  </section>
+
+  {%- set news = get_section(path="news/_index.md") %}
+  <section class="mt-16 grid gap-10 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <h2 class="bj-section-title">Latest news</h2><div class="bj-rule"></div>
+      <div class="mt-6 space-y-4">
+        {%- for item in news.pages[:3] %}
+        <div class="bj-card p-5">
+          <p class="text-sm font-semibold" style="color: var(--bj-muted);">{{ item.date | date(format="%B %-d, %Y") }}</p>
+          <h3 class="mt-1 font-semibold text-lg">{{ item.title }}</h3>
+          {%- if item.summary %}<div class="prose prose-sm max-w-none mt-2">{{ item.summary | safe }}</div>{% else %}<div class="prose prose-sm max-w-none mt-2">{{ item.content | safe }}</div>{% endif %}
+        </div>
+        {%- endfor %}
+      </div>
+      <p class="mt-4"><a class="font-semibold underline" style="color: var(--bj-green-2);" href="{{ get_url(path='news') }}/">All news →</a></p>
+    </div>
+    <aside class="bj-card p-6 h-fit self-start" style="background: var(--bj-green); color: #fff; border: none;">
+      <p class="bj-eyebrow" style="color: var(--bj-gold);">We are recruiting</p>
+      <p class="mt-2 text-lg font-semibold">Graduate students, postdocs, and undergraduate researchers</p>
+      <p class="mt-2 text-sm opacity-90">Interested in microbes, models, and data? Come build virtual cells with us.</p>
+      <a class="bj-btn bj-btn-gold mt-5" href="{{ get_url(path='join') }}/">Open positions</a>
+    </aside>
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{#- Individual member page. -#}
+{% extends "base.html" %}
+{% block content %}
+<div id="member-container" class="max-w-screen-lg mx-auto">
+  <p class="bj-eyebrow"><a href="{{ get_url(path='members') }}/" style="text-decoration:none;">← People</a></p>
+  <div class="mt-4 grid gap-8 md:grid-cols-3 items-start">
+    <div class="md:col-span-1">
+      <img src="{{ get_url(path=page.extra.image) }}" alt="{{ page.extra.first_name }} {{ page.extra.last_name }}" class="w-full rounded-xl object-cover">
+      {%- if page.extra.links %}
+      <ul class="mt-4 space-y-1 text-sm">
+        {%- for l in page.extra.links %}<li><a class="underline" style="color: var(--bj-green-2);" href="{{ l.url }}">{{ l.name }}</a></li>{% endfor %}
+      </ul>
+      {%- endif %}
+    </div>
+    <article class="prose md:col-span-2 max-w-none">
+      <h1 class="mb-1">{{ page.extra.first_name }} {{ page.extra.last_name }}{% if page.extra.suffix %}, {{ page.extra.suffix }}{% endif %}</h1>
+      <p class="mt-0" style="color: var(--bj-muted);">{{ page.extra.position }}</p>
+      {{ page.content | safe }}
+    </article>
+  </div>
+</div>
+<script>
+  const bibContainer = document.getElementById("bib-container")
+  const memberContainer = document.getElementById("member-container")
+  if (bibContainer) { memberContainer.appendChild(bibContainer) }
+</script>
+{% endblock %}

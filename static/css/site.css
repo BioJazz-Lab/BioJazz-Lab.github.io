@@ -1,0 +1,40 @@
+/* BioJazz Lab — site-level styles layered on top of the researchlab theme. */
+:root {
+  --bj-green: #154734;
+  --bj-green-2: #1f5c45;
+  --bj-gold: #FFB81C;
+  --bj-ink: #1f2933;
+  --bj-muted: #5b6770;
+  --bj-bg: #f7f8f6;
+}
+html { scroll-behavior: smooth; }
+body { font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--bj-ink); background: var(--bj-bg); }
+
+/* Prose tweaks */
+.prose { color: var(--bj-ink); }
+.prose a { color: var(--bj-green-2); text-decoration-color: var(--bj-gold); text-underline-offset: 3px; }
+.prose a:hover { color: var(--bj-green); }
+.prose h1, .prose h2, .prose h3 { color: var(--bj-green); letter-spacing: -0.01em; }
+.prose h2 { border-bottom: 2px solid #e6ebe8; padding-bottom: .3em; }
+.prose blockquote { border-left-color: var(--bj-gold); }
+
+/* Cards */
+.bj-card { background: #fff; border: 1px solid #e3e8e5; border-radius: .9rem; box-shadow: 0 1px 2px rgba(16,24,40,.04); transition: transform .2s ease, box-shadow .2s ease; overflow: hidden; }
+a.bj-card:hover, .bj-card.is-link:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(16,24,40,.10); }
+.bj-eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--bj-green-2); }
+.bj-section-title { font-size: 1.6rem; font-weight: 700; color: var(--bj-green); letter-spacing: -0.01em; }
+.bj-rule { width: 3rem; height: 4px; background: var(--bj-gold); border-radius: 2px; margin-top: .5rem; }
+.bj-btn { display: inline-block; padding: .6rem 1.1rem; border-radius: .6rem; font-weight: 600; background: var(--bj-green); color: #fff !important; text-decoration: none !important; }
+.bj-btn:hover { background: var(--bj-green-2); }
+.bj-btn-gold { background: var(--bj-gold); color: var(--bj-green) !important; }
+.bj-btn-gold:hover { background: #ffc94d; }
+
+/* Hero */
+.bj-hero { position: relative; border-radius: 1.25rem; overflow: hidden; min-height: 320px; background: var(--bj-green); }
+.bj-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.bj-hero .bj-hero-text { position: relative; padding: 3rem 2rem; max-width: 46rem; color: #fff; }
+.bj-hero h1 { font-size: 2.6rem; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; }
+@media (max-width: 640px) { .bj-hero h1 { font-size: 2rem; } .bj-hero .bj-hero-text { padding: 2rem 1.25rem; } }
+
+/* TODO marker for placeholder content — easy to spot, remove when filled in */
+.todo { background: #fff4d6; border: 1px dashed #e0a800; border-radius: .5rem; padding: .5rem .75rem; font-size: .9rem; color: #6b4e00; }

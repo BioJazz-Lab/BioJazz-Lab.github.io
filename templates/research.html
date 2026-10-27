@@ -1,0 +1,22 @@
+{#- Research overview: lists the research-area pages in content/research/ (sorted by weight). -#}
+{% extends "base.html" %}
+{% block content %}
+<div class="max-w-screen-lg mx-auto">
+  <div class="prose max-w-none">
+    <h1>{{ section.title }}</h1>
+    {{ section.content | safe }}
+  </div>
+  <div class="mt-10 grid gap-8 md:grid-cols-2">
+    {%- for area in section.pages %}
+    <a href="{{ area.permalink }}" class="bj-card block">
+      {%- if area.extra.image %}<img src="{{ get_url(path=area.extra.image) }}" alt="" class="w-full h-48 object-cover">{% endif %}
+      <div class="p-5">
+        <h2 class="text-xl font-semibold" style="color: var(--bj-green);">{{ area.title }}</h2>
+        <p class="mt-2" style="color: var(--bj-muted);">{{ area.description }}</p>
+        <p class="mt-3 text-sm font-semibold" style="color: var(--bj-green-2);">Read more →</p>
+      </div>
+    </a>
+    {%- endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{#- Base layout (adapted from the researchlab theme; Tera 2 / Zola 0.23+). -#}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%- set desc = page?.description or section?.description or config.description %}
+  {%- if page?.title %}{% set ptitle = page.title ~ " · " ~ config.title %}
+  {%- elif section?.title and section.path != "/" %}{% set ptitle = section.title ~ " · " ~ config.title %}
+  {%- else %}{% set ptitle = config.title ~ " · Baylor University" %}{% endif %}
+  <meta name="description" content="{{ desc }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ ptitle }}">
+  <meta property="og:description" content="{{ desc }}">
+  <meta property="og:url" content="{{ current_url or config.base_url | safe }}">
+  <meta property="og:site_name" content="{{ config.title }}">
+  <title>{% block title %}{{ ptitle }}{% endblock title %}</title>
+  <link rel="icon" type="image/svg+xml" href="{{ get_url(path=config.extra.favicon) }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="{{ get_url(path='css/tailwind.min.css') }}">
+  <link rel="stylesheet" href="{{ get_url(path='css/typography.min.css') }}">
+  <link rel="stylesheet" href="{{ get_url(path='css/main.css') }}">
+  <link rel="stylesheet" href="{{ get_url(path='css/site.css') }}">
+  <script defer src="{{ get_url(path='js/diagram/mermaid.min.js') }}" integrity="sha384-6YRSKOSMk3x6Bn7ihZ903Mt9EwSxoy5KrU1CkzT3d+j0C/qKp0DFgG4lKsnqH1Nm"></script>
+  <script defer src="{{ get_url(path='js/diagram/mermaid-config.js') }}" integrity="sha384-a2dvU77ShDwnty4gFDSjoOf0XwhvkFWC40MdpQWNfbFljoJNaGFYCpamXrQqClO1"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+  {% include "partials/header.html" %}
+  <main class="container mx-auto px-4 pt-28 pb-16 flex-grow">
+    {% block content %}
+    {% endblock content %}
+  </main>
+  {% include "partials/scroll-up-button.html" %}
+  {% include "partials/footer.html" %}
+</body>
+</html>

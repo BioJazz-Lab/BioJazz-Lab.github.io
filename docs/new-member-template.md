@@ -1,0 +1,24 @@
++++
+# HOW TO ADD A LAB MEMBER
+# 1. Copy this file to content/members/<lastname>.md  (e.g. smith.md).
+# 2. Put a square-ish photo at static/img/people/<lastname>.jpg.
+# 3. Fill in the fields below and write a short bio underneath.
+title = "Jane Smith"
+weight = 20            # order within the category (smaller = first)
+[extra]
+first_name = "Jane"
+last_name = "Smith"
+position = "Ph.D. student, Biology"
+category = "grad"      # pi | postdoc | grad | undergrad | staff | alumni
+image = "img/people/smith.jpg"
+image_thumbnail = "img/people/smith.jpg"
+links = [ { name = "jane_smith@baylor.edu", url = "mailto:jane_smith@baylor.edu" } ]
+# For alumni, optionally link to their current page instead of a bio page:
+# url = "https://example.org"
++++
+
+Jane is interested in ...
+
+## Publications
+
+{{<list_publications member="smith" />}}

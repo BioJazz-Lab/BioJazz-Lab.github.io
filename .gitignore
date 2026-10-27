@@ -1,0 +1,12 @@
+# Zola build output
+public/
+# OS / editor clutter
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+
+# files the Claude app saves here
+Claude outputs/

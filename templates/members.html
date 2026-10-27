@@ -1,0 +1,31 @@
+{#- People page: grid of member cards grouped by category; empty categories are hidden. -#}
+{% extends "base.html" %}
+{% block content %}
+<div class="max-w-screen-lg mx-auto">
+  <div class="prose max-w-none">
+    <h1>{{ section.title }}</h1>
+    {{ section.content | safe }}
+  </div>
+  {%- for category in section.extra.members_categories %}
+    {%- set in_category = [m for m in section.pages if m.extra.category == category.category] %}
+    {%- if in_category | length > 0 %}
+  <section class="mt-12" id="{{ category.category }}">
+    <h2 class="bj-section-title">{{ category.name }}</h2><div class="bj-rule"></div>
+    <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {%- for m in section.pages %}{% if m.extra.category == category.category %}
+        {%- if m.extra.url %}{% set link = m.extra.url %}{% else %}{% set link = m.permalink %}{% endif %}
+        {%- if link is starting_with(pat="/") %}{% set link = get_url(path=link) %}{% endif %}
+        {%- if link != "none" %}<a href="{{ link }}" class="bj-card block">{% else %}<div class="bj-card">{% endif %}
+          <img class="w-full h-64 object-cover object-center" src="{{ get_url(path=m.extra.image_thumbnail) }}" alt="{{ m.extra.first_name }} {{ m.extra.last_name }}">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">{{ m.extra.first_name }} {{ m.extra.last_name }}</h3>
+            <p class="text-sm" style="color: var(--bj-muted);">{{ m.extra.position }}</p>
+          </div>
+        {%- if link != "none" %}</a>{% else %}</div>{% endif %}
+      {%- endif %}{% endfor %}
+    </div>
+  </section>
+    {%- endif %}
+  {%- endfor %}
+</div>
+{% endblock %}
