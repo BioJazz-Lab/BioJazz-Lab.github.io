@@ -3,8 +3,11 @@
 content/publications/bib.json, the format read by the researchlab theme's
 `list_publications` shortcode.
 
-This replaces the theme's Julia script so that only Python (standard library)
-is needed. Run from the site root:
+It also converts personal lists in content/publications/members/<username>.bib
+into members/<username>.json; these are shown only on that member's page and
+are never merged into the lab list.
+
+Only Python 3 (standard library) is needed. Run from the site root:
 
     python3 scripts/bib2json.py
 
@@ -119,8 +122,7 @@ def clean_bibtex(e):
     return "\n".join(lines)
 
 
-def main():
-    bib_files = sorted(BIB_DIR.glob("*.bib"))
+def convert(bib_files, out_path):
     entries = []
     for f in bib_files:
         found = parse_bibtex(f.read_text(encoding="utf-8"))
@@ -153,9 +155,18 @@ def main():
         bibs.append(bib)
 
     bibs.sort(key=lambda b: (-b["year"], b["title"].lower()))
-    OUT.write_text(json.dumps({"categories": sorted(categories), "bibs": bibs},
-                              ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {OUT.relative_to(ROOT)}: {len(bibs)} publications, {len(categories)} tags")
+    out_path.write_text(json.dumps({"categories": sorted(categories), "bibs": bibs},
+                                   ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"  -> wrote {out_path.relative_to(ROOT)}: {len(bibs)} publications, {len(categories)} tags")
+
+
+def main():
+    # 1. Lab publications: every .bib directly in content/publications/ -> bib.json
+    convert(sorted(BIB_DIR.glob("*.bib")), OUT)
+    # 2. Personal lists, kept separate from the lab list:
+    #    content/publications/members/<username>.bib -> members/<username>.json
+    for f in sorted((BIB_DIR / "members").glob("*.bib")):
+        convert([f], f.with_suffix(".json"))
 
 
 if __name__ == "__main__":

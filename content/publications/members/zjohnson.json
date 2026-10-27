@@ -1,0 +1,197 @@
+{
+  "categories": [
+    "Book chapter",
+    "Journal article",
+    "Preprint",
+    "Review"
+  ],
+  "bibs": [
+    {
+      "title": "Extreme genome reduction selectively retains modular regulatory architecture in <i>Prochlorococcus</i> MED4: conserved transcriptional modules reveal core physiological regulatory programs",
+      "year": 2026,
+      "author": "Zachary Johnson, Natalie C. Sadler, Marci R. Garcia, Xiaolu Li, Jordan Rozum, Lindsey Anderson, Tong Zhang, Song Feng, Wei-Jun Qian, Margaret S. Cheung, Pavlo Bohutskyi",
+      "cite": "bioRxiv (preprint)",
+      "doi": "10.64898/2026.04.15.718746",
+      "category": [
+        "Preprint"
+      ],
+      "bibtex": "@article{johnson2026prochlorococcus,\n  title = {Extreme genome reduction selectively retains modular regulatory architecture in Prochlorococcus MED4: conserved transcriptional modules reveal core physiological regulatory programs},\n  author = {Johnson, Zachary and Sadler, Natalie C. and Garcia, Marci R. and Li, Xiaolu and Rozum, Jordan and Anderson, Lindsey and Zhang, Tong and Feng, Song and Qian, Wei-Jun and Cheung, Margaret S. and Bohutskyi, Pavlo},\n  journal = {bioRxiv (preprint)},\n  year = {2026},\n  doi = {10.64898/2026.04.15.718746}\n}"
+    },
+    {
+      "title": "From photosynthetic electron flow to gene regulation: redox signal transduction in cyanobacteria",
+      "year": 2026,
+      "author": "Zachary Johnson, Bin Yang, Pavlo Bohutskyi",
+      "cite": "FEMS Microbiology Reviews, 50: fuag030",
+      "doi": "10.1093/femsre/fuag030",
+      "category": [
+        "Review"
+      ],
+      "bibtex": "@article{johnson2026redox,\n  title = {From photosynthetic electron flow to gene regulation: redox signal transduction in cyanobacteria},\n  author = {Johnson, Zachary and Yang, Bin and Bohutskyi, Pavlo},\n  journal = {FEMS Microbiology Reviews},\n  year = {2026},\n  volume = {50},\n  pages = {fuag030},\n  doi = {10.1093/femsre/fuag030}\n}"
+    },
+    {
+      "title": "Hyperthermophilic acidogenic fermentation of lignocellulose: reproducible assembly and hydrolytic specialization of a stable core consortium",
+      "year": 2026,
+      "author": "Zachary Johnson, Natalie Sadler, Jesse Trejo, Yuliya Farris, Hugh Mitchell, Nikola Tolic, Meng Markillie, Bin Yang, Shulin Chen, Pavlo Bohutskyi",
+      "cite": "Chemical Engineering Journal, 182578",
+      "doi": "10.1016/j.cej.2026.182578",
+      "category": [
+        "Journal article"
+      ],
+      "bibtex": "@article{johnson2026hyperthermophilic,\n  title = {Hyperthermophilic acidogenic fermentation of lignocellulose: reproducible assembly and hydrolytic specialization of a stable core consortium},\n  author = {Johnson, Zachary and Sadler, Natalie and Trejo, Jesse and Farris, Yuliya and Mitchell, Hugh and Tolic, Nikola and Markillie, Meng and Yang, Bin and Chen, Shulin and Bohutskyi, Pavlo},\n  journal = {Chemical Engineering Journal},\n  year = {2026},\n  pages = {182578},\n  doi = {10.1016/j.cej.2026.182578}\n}"
+    },
+    {
+      "title": "Phototrophs trade growth for defense through graded regulatory states under escalating oxidative stress",
+      "year": 2026,
+      "author": "Zachary Johnson, Natalie C. Sadler, Marci Garcia, Ashley Gilliam, Eric Allen Hill, Xiaolu Li, Jesse B. Trejo, Wei-Jun Qian, Margaret S. Cheung, Pavlo Bohutskyi",
+      "cite": "iScience, 29(11): 117861",
+      "doi": "10.1016/j.isci.2026.117861",
+      "category": [
+        "Journal article"
+      ],
+      "bibtex": "@article{johnson2026phototrophs,\n  title = {Phototrophs trade growth for defense through graded regulatory states under escalating oxidative stress},\n  author = {Johnson, Zachary and Sadler, Natalie C. and Garcia, Marci and Gilliam, Ashley and Hill, Eric Allen and Li, Xiaolu and Trejo, Jesse B. and Qian, Wei-Jun and Cheung, Margaret S. and Bohutskyi, Pavlo},\n  journal = {iScience},\n  year = {2026},\n  volume = {29},\n  number = {11},\n  pages = {117861},\n  doi = {10.1016/j.isci.2026.117861}\n}"
+    },
+    {
+      "title": "Spatiotemporal 4D Whole-cell Modeling of a Minimal Autotroph Reveals Central Carbon Metabolism Regulated Locally by Protein Megacomplexes via Post-translational Modifications under Light Disturbance",
+      "year": 2026,
+      "author": "Connah G. M. Johnson, Aaron Chan, Jordan Rozum, August George, Amar D. Parvate, Doo Nam Kim, Song Feng, Pavlo Bohutskyi, Zachary Johnson, Natalie Sadler, Marci Garcia, Xiaolu Li, Jesse Trejo, Ruonan Wu, William Sineath, Lindsey N. Anderson, James E. Evans, Angad P. Mehta, Wei-Jun Qian, Zaida Luthey-Schulten, Margaret S. Cheung",
+      "cite": "bioRxiv (preprint)",
+      "doi": "10.64898/2026.01.21.700212",
+      "category": [
+        "Preprint"
+      ],
+      "bibtex": "@article{cjohnson2026spatiotemporal,\n  title = {Spatiotemporal 4D Whole-cell Modeling of a Minimal Autotroph Reveals Central Carbon Metabolism Regulated Locally by Protein Megacomplexes via Post-translational Modifications under Light Disturbance},\n  author = {Johnson, Connah G. M. and Chan, Aaron and Rozum, Jordan and George, August and Parvate, Amar D. and Kim, Doo Nam and Feng, Song and Bohutskyi, Pavlo and Johnson, Zachary and Sadler, Natalie and Garcia, Marci and Li, Xiaolu and Trejo, Jesse and Wu, Ruonan and Sineath, William and Anderson, Lindsey N. and Evans, James E. and Mehta, Angad P. and Qian, Wei-Jun and Luthey-Schulten, Zaida and Cheung, Margaret S.},\n  journal = {bioRxiv (preprint)},\n  year = {2026},\n  doi = {10.64898/2026.01.21.700212}\n}"
+    },
+    {
+      "title": "Stress-Related Transcriptional Regulators Dominate the Conserved Core GRN for Three Cyanobacteria: Network Topology Maps the Highest-Influence Nodes as Promising Engineering Targets",
+      "year": 2026,
+      "author": "Pavlo Bohutskyi, Rudolph DiMura, Zachary Johnson, Robert Li, David Anderson, Margaret Cheung",
+      "cite": "bioRxiv (preprint)",
+      "doi": "10.64898/2026.06.09.731130",
+      "category": [
+        "Preprint"
+      ],
+      "bibtex": "@article{bohutskyi2026grn,\n  title = {Stress-Related Transcriptional Regulators Dominate the Conserved Core GRN for Three Cyanobacteria: Network Topology Maps the Highest-Influence Nodes as Promising Engineering Targets},\n  author = {Bohutskyi, Pavlo and DiMura, Rudolph and Johnson, Zachary and Li, Robert and Anderson, David and Cheung, Margaret},\n  journal = {bioRxiv (preprint)},\n  year = {2026},\n  doi = {10.64898/2026.06.09.731130}\n}"
+    },
+    {
+      "title": "The oleaginous yeast <i>Cutaneotrichosporon oleaginosum</i> modifies corn stover alkali lignin",
+      "year": 2026,
+      "author": "Austin Gluth, Yunqiao Pu, Dehong Hu, Xiaowen Chen, Zachary Johnson, Xiaolu Li, Arthur J. Ragauskas, Wei-Jun Qian, Tong Zhang, Bin Yang",
+      "cite": "Scientific Reports, 16(1): 5656",
+      "doi": "10.1038/s41598-026-36483-5",
+      "category": [
+        "Journal article"
+      ],
+      "bibtex": "@article{gluth2026yeast,\n  title = {The oleaginous yeast Cutaneotrichosporon oleaginosum modifies corn stover alkali lignin},\n  author = {Gluth, Austin and Pu, Yunqiao and Hu, Dehong and Chen, Xiaowen and Johnson, Zachary and Li, Xiaolu and Ragauskas, Arthur J. and Qian, Wei-Jun and Zhang, Tong and Yang, Bin},\n  journal = {Scientific Reports},\n  year = {2026},\n  volume = {16},\n  number = {1},\n  pages = {5656},\n  doi = {10.1038/s41598-026-36483-5}\n}"
+    },
+    {
+      "title": "Whole-cell spatiotemporal model and multimodal data illuminate the multiscale light responses in a photosynthetic bacterium",
+      "year": 2026,
+      "author": "Connah G. M. Johnson, Aaron Chan, Jordan Rozum, August George, Amar D. Parvate, Pavlo Bohutskyi, Doo Nam Kim, Song Feng, Zachary Johnson, Natalie Sadler, Marci Garcia, Xiaolu Li, Jesse Trejo, Ruonan Wu, William Sineath, Lindsey N. Anderson, James E. Evans, Angad P. Mehta, Wei-Jun Qian, Zaida Luthey-Schulten, Margaret S. Cheung",
+      "cite": "Biophysical Journal, 125(19): 5689–5705",
+      "doi": "10.1016/j.bpj.2026.08.020",
+      "category": [
+        "Journal article"
+      ],
+      "bibtex": "@article{cjohnson2026wholecell,\n  title = {Whole-cell spatiotemporal model and multimodal data illuminate the multiscale light responses in a photosynthetic bacterium},\n  author = {Johnson, Connah G. M. and Chan, Aaron and Rozum, Jordan and George, August and Parvate, Amar D. and Bohutskyi, Pavlo and Kim, Doo Nam and Feng, Song and Johnson, Zachary and Sadler, Natalie and Garcia, Marci and Li, Xiaolu and Trejo, Jesse and Wu, Ruonan and Sineath, William and Anderson, Lindsey N. and Evans, James E. and Mehta, Angad P. and Qian, Wei-Jun and Luthey-Schulten, Zaida and Cheung, Margaret S.},\n  journal = {Biophysical Journal},\n  year = {2026},\n  volume = {125},\n  number = {19},\n  pages = {5689–5705},\n  doi = {10.1016/j.bpj.2026.08.020}\n}"
+    },
+    {
+      "title": "Continuous Wet Air Oxidation of the Hydrothermal Liquefaction Aqueous Product from Various Wet Wastes",
+      "year": 2025,
+      "author": "Peipei Wang, Min Soo Kim, Pavlo Bohutskyi, Juliano Souza dos Passos, James Collett, Zachary Johnson, Senthil Subramaniam, Uriah J. Kilgore, Samuel P. Fox, Dylan J. Cronin, Andrew J. Schmidt, Mike Thorson, Huamin Wang",
+      "cite": "ACS Sustainable Resource Management, 2(8): 1562–1570",
+      "doi": "10.1021/acssusresmgt.5c00249",
+      "category": [
+        "Journal article"
+      ],
+      "bibtex": "@article{wang2025wetair,\n  title = {Continuous Wet Air Oxidation of the Hydrothermal Liquefaction Aqueous Product from Various Wet Wastes},\n  author = {Wang, Peipei and Kim, Min Soo and Bohutskyi, Pavlo and Souza dos Passos, Juliano and Collett, James and Johnson, Zachary and Subramaniam, Senthil and Kilgore, Uriah J. and Fox, Samuel P. and Cronin, Dylan J. and Schmidt, Andrew J. and Thorson, Mike and Wang, Huamin},\n  journal = {ACS Sustainable Resource Management},\n  year = {2025},\n  volume = {2},\n  number = {8},\n  pages = {1562–1570},\n  doi = {10.1021/acssusresmgt.5c00249}\n}"
+    },
+    {
+      "title": "Cyanobacterial circadian regulation enhances bioproduction under subjective nighttime through rewiring of carbon partitioning dynamics, redox balance orchestration, and cell cycle modulation",
+      "year": 2025,
+      "author": "Ashley Gilliam, Natalie C. Sadler, Xiaolu Li, Marci Garcia, Zachary Johnson, Marija Veličković, Young-Mo Kim, Song Feng, Wei-Jun Qian, Margaret S. Cheung, Pavlo Bohutskyi",
+      "cite": "Microbial Cell Factories, 24(1): 56",
+      "doi": "10.1186/s12934-025-02665-5",
+      "category": [
+        "Journal article"
+      ],
+      "bibtex": "@article{gilliam2025circadian,\n  title = {Cyanobacterial circadian regulation enhances bioproduction under subjective nighttime through rewiring of carbon partitioning dynamics, redox balance orchestration, and cell cycle modulation},\n  author = {Gilliam, Ashley and Sadler, Natalie C. and Li, Xiaolu and Garcia, Marci and Johnson, Zachary and Veličković, Marija and Kim, Young-Mo and Feng, Song and Qian, Wei-Jun and Cheung, Margaret S. and Bohutskyi, Pavlo},\n  journal = {Microbial Cell Factories},\n  year = {2025},\n  volume = {24},\n  number = {1},\n  pages = {56},\n  doi = {10.1186/s12934-025-02665-5}\n}"
+    },
+    {
+      "title": "Enhanced lignocellulose hydrolysis and controlled biogas-to-platform chemical switching through temperature-driven microbial specialization in hyperthermophilic anaerobic digestion",
+      "year": 2025,
+      "author": "Yaojing Qiu, Zachary Johnson, Sasa Zuo, Xiangyu Gu, Pavlo Bohutskyi, Shulin Chen",
+      "cite": "Chemical Engineering Journal, 525: 170235",
+      "doi": "10.1016/j.cej.2025.170235",
+      "category": [
+        "Journal article"
+      ],
+      "bibtex": "@article{qiu2025lignocellulose,\n  title = {Enhanced lignocellulose hydrolysis and controlled biogas-to-platform chemical switching through temperature-driven microbial specialization in hyperthermophilic anaerobic digestion},\n  author = {Qiu, Yaojing and Johnson, Zachary and Zuo, Sasa and Gu, Xiangyu and Bohutskyi, Pavlo and Chen, Shulin},\n  journal = {Chemical Engineering Journal},\n  year = {2025},\n  volume = {525},\n  pages = {170235},\n  doi = {10.1016/j.cej.2025.170235}\n}"
+    },
+    {
+      "title": "Gene network centrality analysis identifies key regulators coordinating day-night metabolic transitions in <i>Synechococcus elongatus</i> PCC 7942 despite limited accuracy in predicting direct regulator-gene interactions",
+      "year": 2025,
+      "author": "Zachary Johnson, David Anderson, Margaret S. Cheung, Pavlo Bohutskyi",
+      "cite": "Frontiers in Microbiology, 16: 1569559",
+      "doi": "10.3389/fmicb.2025.1569559",
+      "category": [
+        "Journal article"
+      ],
+      "bibtex": "@article{johnson2025centrality,\n  title = {Gene network centrality analysis identifies key regulators coordinating day-night metabolic transitions in Synechococcus elongatus PCC 7942 despite limited accuracy in predicting direct regulator-gene interactions},\n  author = {Johnson, Zachary and Anderson, David and Cheung, Margaret S. and Bohutskyi, Pavlo},\n  journal = {Frontiers in Microbiology},\n  year = {2025},\n  volume = {16},\n  pages = {1569559},\n  doi = {10.3389/fmicb.2025.1569559}\n}"
+    },
+    {
+      "title": "Modular cyanobacterial regulatory architecture enables dynamic graded responses to oxidative stress",
+      "year": 2025,
+      "author": "Zachary Johnson, Natalie C. Sadler, Marci Garcia, Ashley Gilliam, Eric Allen Hill, Wei-Jun Qian, Margaret S. Cheung, Pavlo Bohutskyi",
+      "cite": "bioRxiv (preprint)",
+      "doi": "10.1101/2025.07.21.665879",
+      "category": [
+        "Preprint"
+      ],
+      "bibtex": "@article{johnson2025modular,\n  title = {Modular cyanobacterial regulatory architecture enables dynamic graded responses to oxidative stress},\n  author = {Johnson, Zachary and Sadler, Natalie C. and Garcia, Marci and Gilliam, Ashley and Hill, Eric Allen and Qian, Wei-Jun and Cheung, Margaret S. and Bohutskyi, Pavlo},\n  journal = {bioRxiv (preprint)},\n  year = {2025},\n  doi = {10.1101/2025.07.21.665879}\n}"
+    },
+    {
+      "title": "Multi-Omics Reveals Temporal Scales of Carbon Metabolism in <i>Synechococcus elongatus</i> PCC 7942 Under Light Disturbance",
+      "year": 2025,
+      "author": "Connah G. M. Johnson, Zachary Johnson, Liam S. Mackey, Xiaolu Li, Natalie C. Sadler, Tong Zhang, Wei-Jun Qian, Pavlo Bohutskyi, Song Feng, Margaret S. Cheung",
+      "cite": "PRX Life, 3(3): 033017",
+      "doi": "10.1103/l2dp-kw2t",
+      "category": [
+        "Journal article"
+      ],
+      "bibtex": "@article{cjohnson2025carbon,\n  title = {Multi-Omics Reveals Temporal Scales of Carbon Metabolism in Synechococcus elongatus PCC 7942 Under Light Disturbance},\n  author = {Johnson, Connah G. M. and Johnson, Zachary and Mackey, Liam S. and Li, Xiaolu and Sadler, Natalie C. and Zhang, Tong and Qian, Wei-Jun and Bohutskyi, Pavlo and Feng, Song and Cheung, Margaret S.},\n  journal = {PRX Life},\n  year = {2025},\n  volume = {3},\n  number = {3},\n  pages = {033017},\n  doi = {10.1103/l2dp-kw2t}\n}"
+    },
+    {
+      "title": "Dairy manure acidogenic fermentation at hyperthermophilic temperature enabled superior activity of thermostable hydrolytic enzymes linked to the genus <i>Caldicoprobacter</i>",
+      "year": 2024,
+      "author": "Yaojing Qiu, Zachary Johnson, Xiangyu Gu, Pavlo Bohutskyi, Shulin Chen",
+      "cite": "Bioresource Technology, 391: 129978",
+      "doi": "10.1016/j.biortech.2023.129978",
+      "category": [
+        "Journal article"
+      ],
+      "bibtex": "@article{qiu2024dairyfermentation,\n  title = {Dairy manure acidogenic fermentation at hyperthermophilic temperature enabled superior activity of thermostable hydrolytic enzymes linked to the genus Caldicoprobacter},\n  author = {Qiu, Yaojing and Johnson, Zachary and Gu, Xiangyu and Bohutskyi, Pavlo and Chen, Shulin},\n  journal = {Bioresource Technology},\n  year = {2024},\n  volume = {391},\n  pages = {129978},\n  doi = {10.1016/j.biortech.2023.129978}\n}"
+    },
+    {
+      "title": "Improving dairy manure hydrolysis and acidification through microbial community restructuring by adaptation to hyperthermophilic conditions",
+      "year": 2024,
+      "author": "Yaojing Qiu, Xiangyu Gu, Zachary Johnson, Pavlo Bohutskyi, Shulin Chen",
+      "cite": "Journal of Cleaner Production, 473: 143487",
+      "doi": "10.1016/j.jclepro.2024.143487",
+      "category": [
+        "Journal article"
+      ],
+      "bibtex": "@article{qiu2024dairyhydrolysis,\n  title = {Improving dairy manure hydrolysis and acidification through microbial community restructuring by adaptation to hyperthermophilic conditions},\n  author = {Qiu, Yaojing and Gu, Xiangyu and Johnson, Zachary and Bohutskyi, Pavlo and Chen, Shulin},\n  journal = {Journal of Cleaner Production},\n  year = {2024},\n  volume = {473},\n  pages = {143487},\n  doi = {10.1016/j.jclepro.2024.143487}\n}"
+    },
+    {
+      "title": "Metals and methylotrophy: Via global gene expression studies",
+      "year": 2021,
+      "author": "Z. J. Johnson, D. D. Krutkin, P. Bohutskyi, M. G. Kalyuzhnaya",
+      "cite": "In Rare-Earth Element Biochemistry: Methanol Dehydrogenases and Lanthanide Biology (Methods in Enzymology, vol. 650), pp. 185–213",
+      "doi": "10.1016/bs.mie.2021.01.046",
+      "category": [
+        "Book chapter"
+      ],
+      "bibtex": "@incollection{johnson2021metals,\n  title = {Metals and methylotrophy: Via global gene expression studies},\n  author = {Johnson, Z. J. and Krutkin, D. D. and Bohutskyi, P. and Kalyuzhnaya, M. G.},\n  booktitle = {Rare-Earth Element Biochemistry: Methanol Dehydrogenases and Lanthanide Biology},\n  series = {Methods in Enzymology, vol. 650},\n  year = {2021},\n  pages = {185–213},\n  doi = {10.1016/bs.mie.2021.01.046}\n}"
+    }
+  ]
+}

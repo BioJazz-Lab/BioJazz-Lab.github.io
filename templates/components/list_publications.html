@@ -2,12 +2,14 @@
   list_publications component: renders content/publications/bib.json as a filterable list.
   Use it in Markdown content, e.g.
       {{<list_publications show_filters={true} filter_categories_heading="Filter by topic" />}}
-      {{<list_publications member="feng" />}}     (only that member's papers)
+      {{<list_publications member="feng" />}}     (only that member's papers in the lab list)
+      {{<list_publications data_file="content/publications/members/zjohnson.json" />}}
+                                                  (a member's separate personal list)
   Adapted from the researchlab theme's shortcode (MIT licence) for Zola 0.23+ / Tera 2.
   The output is captured and blank lines are removed so that Markdown treats it as one HTML block.
 -#}
-{% component list_publications(member: string = "", show_filters: bool = false, filter_categories_heading: string = "Select categories", filter_order_heading: string = "Order by", filter_order_by_year_heading: string = "Year", filter_order_by_title_heading: string = "Title") %}
-{%- set data = load_data(path="content/publications/bib.json") %}
+{% component list_publications(data_file: string = "content/publications/bib.json", member: string = "", show_filters: bool = false, filter_categories_heading: string = "Select categories", filter_order_heading: string = "Order by", filter_order_by_year_heading: string = "Year", filter_order_by_title_heading: string = "Title") %}
+{%- set data = load_data(path=data_file) %}
 {%- set member_username = member %}
 {%- set html %}{% if data["categories"] %}
 <div id="bib-container" class="max-w-2xl mx-auto mt-4 mb-2">

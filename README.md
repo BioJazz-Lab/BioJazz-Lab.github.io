@@ -58,6 +58,15 @@ Then run `python3 scripts/bib2json.py` to update `bib.json`. GitHub Actions
 also runs this before every build, so a commit that changes only the `.bib`
 file still updates the site.
 
+**Give a member a personal publication list.** To show a member's own
+publications (for example, from before they joined) without mixing them into
+the lab's Publications page, put them in
+`content/publications/members/<username>.bib`. Then show them on that member's
+page with
+`{{<list_publications data_file="content/publications/members/<username>.json" />}}`.
+`scripts/bib2json.py` converts each of these files separately; see
+`zjohnson.bib` for an example.
+
 **Add a research area.** Copy one of the files in `content/research/`, then
 change `title`, `description`, `weight` (its position in the order) and
 `image`.
