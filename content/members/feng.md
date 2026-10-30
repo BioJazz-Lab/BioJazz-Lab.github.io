@@ -8,10 +8,8 @@ last_name = "Feng"
 suffix = "Ph.D."
 position = "Assistant Professor & Principal Investigator"
 category = "pi"
-# TODO (Song): save your portrait as static/img/people/feng.jpg, then change the
-# two lines below to "img/people/feng.jpg".
-image = "img/people/placeholder.svg"
-image_thumbnail = "img/people/placeholder.svg"
+image = "img/people/feng.jpg"
+image_thumbnail = "img/people/feng.jpg"
 links = [
     { name = "Song_Feng@baylor.edu", url = "mailto:Song_Feng@baylor.edu" },
     { name = "Baylor faculty profile", url = "https://biology.artsandsciences.baylor.edu/person/song-feng-phd" },
