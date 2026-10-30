@@ -71,19 +71,24 @@
       return '<span class="bj-chip ring-1 ring-inset inline-flex items-center rounded-md px-2 py-1 text-xs font-medium" data-cat="' +
         esc(c) + '" style="background:' + p[0] + ";color:" + p[1] + (filtersOn ? ";cursor:pointer" : "") + '">' + esc(c) + "</span>";
     }
+    // A mapping entry is either a list of names (linked to the member's page) or,
+    // for alumni without a page, {"names": [...], "url": "..."}.
+    function namesOf(entry) { return Array.isArray(entry) ? entry : (entry && entry.names) || []; }
+    function urlOf(user, entry) { return Array.isArray(entry) ? membersUrl + user + "/" : entry.url; }
     function linkAuthors(authors) {
       var html = esc(authors);
       Object.keys(membersMap).forEach(function (user) {
-        membersMap[user].forEach(function (name) {
+        var url = urlOf(user, membersMap[user]);
+        namesOf(membersMap[user]).forEach(function (name) {
           var n = esc(name);
-          if (html.indexOf(n) >= 0) html = html.split(n).join('<a href="' + membersUrl + user + '/">' + n + "</a>");
+          if (html.indexOf(n) >= 0) html = html.split(n).join('<a href="' + esc(url) + '">' + n + "</a>");
         });
       });
       return html;
     }
     function belongsToMember(b) {
       if (!member) return true;
-      return (membersMap[member] || []).some(function (n) { return b.author.indexOf(n) >= 0; });
+      return namesOf(membersMap[member]).some(function (n) { return b.author.indexOf(n) >= 0; });
     }
     function render() {
       shown = bibs.filter(belongsToMember).filter(function (b) {

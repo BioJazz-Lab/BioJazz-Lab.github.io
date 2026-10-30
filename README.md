@@ -50,7 +50,9 @@ The three newest items appear on the home page automatically.
 position is filled, delete the matching `content/members/open-*.md` placeholder.
 To link the new member's name in the publication list, add them to
 `content/publications/members_mapping.json`, for example
-`"smith": ["Jane Smith"]`.
+`"smith": ["Jane Smith"]`. Alumni without a member page can be linked to
+another page instead, for example
+`"smith": {"names": ["Jane Smith"], "url": "https://scholar.google.com/..."}`.
 
 **Add a publication.** Paste the BibTeX entry into
 `content/publications/feng.bib` and add a `labels = {Topic A, Topic B}` line.

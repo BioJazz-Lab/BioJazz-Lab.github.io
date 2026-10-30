@@ -1,4 +1,6 @@
 {
   "feng": ["Song Feng"],
-  "zjohnson": ["Zachary Johnson", "Z. J. Johnson"]
+  "zjohnson": ["Zachary Johnson", "Z. J. Johnson"],
+  "rozum": { "names": ["Jordan C. Rozum", "Jordan Rozum"], "url": "https://scholar.google.com/citations?user=xUOh4q4AAAAJ" },
+  "sineath": { "names": ["William Sineath"], "url": "https://scholar.google.com/citations?user=NfnzKzoAAAAJ&hl=en" }
 }
