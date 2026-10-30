@@ -36,8 +36,9 @@ project_members_heading = { en = "People" }
 mobile_open_menu_button = { en = "Open main menu" }
 mobile_close_menu_button = { en = "Close menu" }
 
-# Footer icons. Available icons: github, gitlab, google-scholar, linkedin,
-# mastodon, matrix, slack, x, youtube  (files in static/social_icons)
+# Footer icons (also usable as `icon` on member-page links). Available icons:
+# bluesky, email, github, gitlab, google-scholar, linkedin, mastodon, matrix,
+# orcid, researchgate, slack, university, x, youtube  (files in static/social_icons)
 socials = [
     { name = "GitHub", url = "https://github.com/BioJazz-Lab", icon = "github" },
     { name = "Google Scholar", url = "https://scholar.google.com/citations?user=EVwMn_EAAAAJ&hl=en", icon = "google-scholar" },

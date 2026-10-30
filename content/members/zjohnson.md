@@ -12,9 +12,9 @@ category = "postdoc"
 image = "img/people/placeholder.svg"
 image_thumbnail = "img/people/placeholder.svg"
 links = [
-    { name = "Google Scholar", url = "https://scholar.google.com/citations?user=6Bl1ZTMAAAAJ&hl=en" },
+    { name = "Google Scholar", url = "https://scholar.google.com/citations?user=6Bl1ZTMAAAAJ&hl=en", icon = "google-scholar" },
     # TODO: add Zachary's Baylor e-mail, e.g.
-    # { name = "first_last@baylor.edu", url = "mailto:first_last@baylor.edu" },
+    # { name = "first_last@baylor.edu", url = "mailto:first_last@baylor.edu", icon = "email" },
 ]
 +++
 

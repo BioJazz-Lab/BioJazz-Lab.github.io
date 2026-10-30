@@ -12,7 +12,8 @@ position = "Ph.D. student, Biology"
 category = "grad"      # pi | postdoc | grad | undergrad | staff | alumni
 image = "img/people/smith.jpg"
 image_thumbnail = "img/people/smith.jpg"
-links = [ { name = "jane_smith@baylor.edu", url = "mailto:jane_smith@baylor.edu" } ]
+# Optional `icon` per link: see the list of icons in config.toml.
+links = [ { name = "jane_smith@baylor.edu", url = "mailto:jane_smith@baylor.edu", icon = "email" } ]
 # For alumni, optionally link to their current page instead of a bio page:
 # url = "https://example.org"
 +++

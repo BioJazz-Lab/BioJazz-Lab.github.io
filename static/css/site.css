@@ -43,3 +43,5 @@ a.bj-card:hover, .bj-card.is-link:hover { transform: translateY(-3px); box-shado
 .bj-summary { list-style: none; }
 .bj-summary::-webkit-details-marker { display: none; }
 .bj-pubs .bj-card h3 i { font-style: italic; }
+.bj-link { display: inline-flex; align-items: center; gap: .5rem; }
+.bj-link-icon { flex: none; width: 1rem; height: 1rem; background-color: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
