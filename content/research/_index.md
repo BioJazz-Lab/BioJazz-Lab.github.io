@@ -9,8 +9,8 @@ description = "Research themes of the BioJazz Lab at Baylor University: cell phy
 applications_title = "From principles to applications"
 applications_intro = "The design principles we uncover in microbes carry over to human health and to a sustainable bioeconomy. We apply our four themes in these areas, often with clinical, experimental, and national laboratory collaborators."
 applications = [
-    { name = "Aging and Diseases", text = "How metabolism, signaling, and resource allocation change with age, and how these changes drive age-related diseases such as cancer, diabetes, and other metabolic diseases.", themes = "Cell Physiology and Communities · Predictive Phenomics · AI for Biology" },
-    { name = "Infection and Immunology", text = "Host responses to pathogenic viruses, and how bacteriophages rewire host metabolism.", themes = "Cell Physiology and Communities · AI for Biology" },
+    { name = "Aging & Disease", text = "How metabolism, signaling, and resource allocation change with age, and how these changes drive age-related diseases such as cancer, diabetes, and other metabolic diseases.", themes = "Cell Physiology and Communities · Predictive Phenomics · AI for Biology" },
+    { name = "Infection & Immunity", text = "Host responses to pathogenic viruses, and how bacteriophages rewire host metabolism.", themes = "Cell Physiology and Communities · AI for Biology" },
     { name = "Bioeconomy", text = "Understanding and designing microbes and microbial communities for bioproduction, carbon capture, and bioenergy, from photosynthetic cyanobacteria to engineered consortia.", themes = "Cell Physiology and Communities · Predictive Phenomics · AI for Biology" },
     { name = "One Health", text = "How microbes and microbial communities connect environmental, animal, and human health, and how they evolve across these settings.", themes = "Cell Physiology and Communities · Evolutionary Systems & Synthetic Biology" },
 ]
