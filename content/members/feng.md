@@ -33,9 +33,9 @@ de novo design and systematic control.
 Song’s lab combines multi-omics approaches, such as proteomics and
 metabolomics, with mechanistic yet data-constrained modeling, from virtual
 cell models to *in silico* evolution. The work spans four themes: cell
-physiology and communities, predictive phenomics, evolutionary systems biology,
-and AI for biology, with applications to cancer, infectious disease, and other
-areas of human health.
+physiology and communities, predictive phenomics, evolutionary systems and
+synthetic biology, and AI for biology, with applications to aging and age-related disease,
+infectious disease, and the bioeconomy.
 
 Before joining Baylor, Song was a senior scientist at Pacific Northwest National
 Laboratory and a postdoctoral researcher at the Center for Nonlinear Studies,

@@ -1,6 +1,6 @@
 +++
-title = "Evolutionary Systems Biology"
-description = "Why biological networks are built the way they are: evolution under biophysical and biochemical constraints, studied with in silico evolution."
+title = "Evolutionary Systems & Synthetic Biology"
+description = "Why biological networks are built the way they are, and how to use the design principles evolution discovers to design new ones."
 weight = 3
 [extra]
 image = "img/research/evolutionary-systems.svg"

@@ -7,7 +7,7 @@
 
 base_url = "https://biojazz-lab.github.io"
 title = "BioJazz Lab"
-description = "The BioJazz Lab at Baylor University combines multi-omics with mechanistic, data-constrained models to uncover the design principles of biological systems and how evolution discovers them."
+description = "The BioJazz Lab at Baylor University studies the dynamics, evolution, control, and design of biological systems, uncovering evolutionary design principles to guide de novo design and systematic control."
 default_language = "en"
 
 compile_sass = false
