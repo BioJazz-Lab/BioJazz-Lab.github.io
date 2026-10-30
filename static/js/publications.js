@@ -49,6 +49,8 @@
     var member = root.dataset.member || "";
     var membersUrl = root.dataset.membersUrl || "/members/";
     var filtersOn = root.dataset.filters === "1";
+    var splitYear = +root.dataset.splitYear || 0;
+    var splitLabel = root.dataset.splitLabel || "";
     var list = root.querySelector(".bj-pubs-list");
     var boxes = root.querySelectorAll(".bj-pubs-cat input[type=checkbox]");
     var label = root.querySelector(".bj-pubs-cat-label");
@@ -97,8 +99,12 @@
       shown.sort(order === "title"
         ? function (a, b) { return a.title.localeCompare(b.title, "en", { sensitivity: "base" }); }
         : function (a, b) { return b.year - a.year; });
+      // In year order, a sub-heading (e.g. "2015–2025") goes above the first older paper.
+      var splitAt = order === "year" && splitYear && splitLabel
+        ? shown.findIndex(function (b) { return b.year <= splitYear; }) : -1;
       list.innerHTML = shown.map(function (b, i) {
-        return '<div class="bj-card p-4">' +
+        return (i === splitAt ? '<h3 class="bj-pubs-divider">' + esc(splitLabel) + "</h3>" : "") +
+          '<div class="bj-card p-4">' +
           '<h3 class="text-lg font-semibold" style="color: var(--bj-green);">' + b.title + "</h3>" +
           (b.category.length ? '<div class="mt-3 flex flex-wrap gap-1">' + b.category.map(chip).join("") + "</div>" : "") +
           '<p class="prose max-w-none mt-3 mb-0">' + linkAuthors(b.author) + "</p>" +

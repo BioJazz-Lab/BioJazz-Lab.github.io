@@ -7,10 +7,12 @@ description = "Selected publications and preprints from the BioJazz Lab and Dr. 
 #   data_file: JSON written by scripts/bib2json.py
 #     - content/publications/preprints.json  <- content/publications/preprints/*.bib
 #     - content/publications/bib.json        <- content/publications/*.bib
+#   split_year / split_label (optional): when the list is ordered by year, show
+#     split_label as a sub-heading above the first paper from split_year or earlier.
 [extra]
 sections = [
     { title = "Preprints", data_file = "content/publications/preprints.json" },
-    { title = "Peer-reviewed publications", data_file = "content/publications/bib.json", show_filters = true },
+    { title = "Peer-reviewed publications", data_file = "content/publications/bib.json", show_filters = true, split_year = 2025, split_label = "2015–2025" },
 ]
 +++
 

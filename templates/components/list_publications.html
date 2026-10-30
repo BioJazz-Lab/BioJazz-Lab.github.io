@@ -9,15 +9,17 @@
       {{<list_publications data_file="content/publications/preprints.json" />}}
 
   data_file: a JSON file written by scripts/bib2json.py.
+  split_year / split_label: in year order, show split_label as a sub-heading above
+  the first paper from split_year or earlier (0 = no sub-heading).
   The output is captured and blank lines are removed so that Markdown treats it as one HTML block.
 -#}
-{% component list_publications(data_file: string = "content/publications/bib.json", member: string = "", show_filters: bool = false, filter_categories_heading: string = "Select categories", filter_order_heading: string = "Order by", filter_order_by_year_heading: string = "Year", filter_order_by_title_heading: string = "Title") %}
+{% component list_publications(data_file: string = "content/publications/bib.json", member: string = "", show_filters: bool = false, split_year: integer = 0, split_label: string = "", filter_categories_heading: string = "Select categories", filter_order_heading: string = "Order by", filter_order_by_year_heading: string = "Year", filter_order_by_title_heading: string = "Title") %}
 {%- set data = load_data(path=data_file) %}
 {%- set members_map = load_data(path="content/publications/members_mapping.json") %}
 {#- Tag colours follow the lab list's tag order, so a tag has the same colour in every list. -#}
 {%- set lab_list = load_data(path="content/publications/bib.json") %}
 {%- set html %}
-<div class="bj-pubs max-w-2xl mx-auto mt-4 mb-2" data-member="{{ member }}" data-filters="{{ '1' if show_filters else '0' }}" data-members-url="{{ get_url(path='members') }}/">
+<div class="bj-pubs max-w-2xl mx-auto mt-4 mb-2" data-member="{{ member }}" data-filters="{{ '1' if show_filters else '0' }}" data-split-year="{{ split_year }}" data-split-label="{{ split_label }}" data-members-url="{{ get_url(path='members') }}/">
 {%- if show_filters %}
 <div class="flex flex-wrap gap-4 pb-8">
 <details class="bj-pubs-cat relative flex-auto w-64">
