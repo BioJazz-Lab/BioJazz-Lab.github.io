@@ -6,6 +6,8 @@ sort_by = "weight"
 description = "Research themes of the BioJazz Lab at Baylor University: cell physiology and communities, predictive phenomics, evolutionary systems and synthetic biology, and AI for biology."
 
 [extra]
+overview_image = "img/research/evolutionary-landscape.svg"
+overview_alt = "An evolutionary landscape: molecular networks, cells, and microbial communities sit on peaks that evolution has found, while de novo design reaches a higher peak beyond evolution."
 applications_title = "From principles to applications"
 applications_intro = "The design principles we uncover in microbes carry over to human health and to a sustainable bioeconomy. We apply our four themes in these areas, often with clinical, experimental, and national laboratory collaborators."
 applications = [

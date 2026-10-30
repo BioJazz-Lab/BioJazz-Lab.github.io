@@ -4,12 +4,12 @@
 # 2. Put a square-ish photo at static/img/people/<lastname>.jpg.
 # 3. Fill in the fields below and write a short bio underneath.
 title = "Jane Smith"
-weight = 20            # order within the category (smaller = first)
+weight = 20            # not used on the People page, which sorts by last_name
 [extra]
 first_name = "Jane"
 last_name = "Smith"
 position = "Ph.D. student, Biology"
-category = "grad"      # pi | postdoc | grad | undergrad | staff | alumni
+category = "grad"      # pi | postdoc | grad | undergrad | staff | alumni (not shown on the People page)
 image = "img/people/smith.jpg"
 image_thumbnail = "img/people/smith.jpg"
 # Optional `icon` per link: see the list of icons in config.toml.

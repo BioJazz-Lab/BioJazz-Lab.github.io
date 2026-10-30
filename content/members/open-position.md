@@ -1,13 +1,12 @@
 +++
 # PLACEHOLDER — an "open position" card that links to the Join Us page.
-# Delete this file once the position is filled.
-title = "Open position: Postdoc"
+# Shown last on the People page. Delete this file if you no longer want the card.
+title = "Open positions"
 weight = 90
 [extra]
-first_name = "Open position"
+first_name = "Open positions"
 last_name = ""
-position = "Postdoctoral researcher: apply now"
-category = "postdoc"
+position = "Postdocs, graduate students, and undergraduates: join us"
 image = "img/people/open-position.svg"
 image_thumbnail = "img/people/open-position.svg"
 url = "/join/"
