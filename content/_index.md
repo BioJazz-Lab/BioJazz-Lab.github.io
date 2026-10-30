@@ -5,7 +5,7 @@ template = "index.html"
 [extra]
 hero_image = "img/hero.svg"
 eyebrow = "Department of Biology · Baylor University"
-headline = "Design principles of biological systems"
+headline = "Design Principles of Biological Systems"
 tagline = "We study complex biological systems to understand their dynamics, evolution, control, and design. Our ultimate goal is to uncover the evolutionary design principles of biological systems and use them to guide de novo design and systematic control."
 +++
 
