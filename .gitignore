@@ -10,3 +10,6 @@ Thumbs.db
 
 # files the Claude app saves here
 Claude outputs/
+
+# reference examples kept locally, not published
+examples/
