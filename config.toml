@@ -14,6 +14,8 @@ compile_sass = false
 build_search_index = false
 generate_feeds = true
 feed_filenames = ["atom.xml"]
+# Poster source files (HTML, images used to render the PDF) stay in the repo but are not published.
+ignored_content = ["**/posters/*/source/**"]
 
 [markdown]
 smart_punctuation = true

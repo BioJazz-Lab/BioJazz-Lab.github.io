@@ -47,3 +47,6 @@ a.bj-card:hover, .bj-card.is-link:hover { transform: translateY(-3px); box-shado
 .bj-link-icon { flex: none; width: 1rem; height: 1rem; background-color: currentColor; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
 .bj-pubs-divider { display: flex; align-items: center; gap: .75rem; margin: .5rem 0 -1rem; font-size: 1.15rem; font-weight: 700; color: var(--bj-green); }
 .bj-pubs-divider::after { content: ""; flex: 1; height: 2px; background: var(--bj-gold); border-radius: 1px; }
+
+/* Recruiting posters on the Join Us page (templates/partials/posters.html) */
+.prose .bj-posters figure, .prose .bj-posters img, .prose .bj-posters p { margin: 0; }

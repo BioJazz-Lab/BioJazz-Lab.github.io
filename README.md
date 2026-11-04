@@ -21,6 +21,7 @@ automatically (about 1 minute).
 | Publications | `content/publications/feng.bib` (BibTeX); preprints in `content/publications/preprints/` |
 | News items (one file per item) | `content/news/YYYY-MM-DD-title.md` |
 | Join Us / Contact pages | `content/join.md`, `content/contact.md` |
+| Recruiting posters (one folder per poster) | `content/posters/<academic-year>-<audience>/` |
 | Menu, colours, e-mail, social links | `config.toml` |
 | Images | `static/img/…` (people photos in `static/img/people/`) |
 | Page layouts (rarely needed) | `templates/` |
@@ -75,6 +76,18 @@ page with
 `{{<list_publications data_file="content/publications/members/<username>.json" />}}`.
 `scripts/bib2json.py` converts each of these files separately; see
 `zjohnson.bib` for an example.
+
+**Add a recruiting poster.** Make a folder named after the academic year and
+audience, for example `content/posters/2027-28-undergrad/`. Put in it the poster
+PDF, a preview image (JPEG about 1100 px wide; on a Mac,
+`sips -s format jpeg --resampleWidth 1100 poster.png --out poster-preview.jpg`),
+and an `index.md` copied from `content/posters/2026-27-phd-recruiting/index.md`
+with `title`, `date`, `academic_year`, `audience`, `pdf` and `image` updated.
+Put year tags in the file names, for example `BioJazz-PhD-poster-2026-27.pdf`.
+The Join Us page shows every poster from the newest academic year where
+`content/join.md` has `<!-- posters -->`. Each poster also has its own page, for
+example `/posters/2026-27-phd-recruiting/`. Files used to make the poster can go
+in a `source/` subfolder; they stay in the repository but are not published.
 
 **Add a research area.** Copy one of the files in `content/research/`, then
 change `title`, `description`, `weight` (its position in the order) and

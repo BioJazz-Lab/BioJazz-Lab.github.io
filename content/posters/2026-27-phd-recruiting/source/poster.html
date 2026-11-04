@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BioJazz Lab PhD Recruiting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=block" rel="stylesheet">
+<style>
+  @page { size: 8.5in 11in; margin: 0; }
+  :root {
+    --green: #154734;
+    --green-2: #1f5c45;
+    --green-ink: #0f3526;
+    --gold: #FFB81C;
+    --gold-ink: #8a5f00;
+    --cream: #F7F3E9;
+    --card: #FFFDF8;
+    --ink: #18261f;
+    --muted: #4c5f55;
+    --line: #e2dccb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 816px; height: 1056px; background: var(--cream); }
+  body {
+    font-family: Inter, system-ui, sans-serif; color: var(--ink);
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    overflow: hidden; position: relative;
+  }
+  .serif { font-family: Fraunces, Georgia, serif; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative; height: 436px; color: #fff; overflow: hidden;
+    background: radial-gradient(120% 90% at 85% 10%, #22654b 0%, #154734 45%, #0d3021 100%);
+  }
+  .hero .net { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .55; }
+  .hero .land { position: absolute; left: 0; bottom: -1px; width: 816px; height: 436px; }
+  .hero-inner { position: relative; padding: 34px 44px 0; }
+  .eyebrow {
+    font-size: 9.5px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow img { width: 22px; height: 22px; }
+  .headline { display: flex; align-items: flex-end; gap: 18px; margin-top: 18px; }
+  .big-num {
+    font-family: Fraunces, serif; font-weight: 700; font-size: 128px; line-height: .78;
+    color: var(--gold); letter-spacing: -.04em;
+    font-variation-settings: "opsz" 144;
+  }
+  .headline h1 {
+    font-family: Fraunces, serif; font-weight: 600; font-size: 46px; line-height: .98;
+    letter-spacing: -.015em; padding-bottom: 2px;
+    font-variation-settings: "opsz" 144;
+  }
+  .headline h1 em { font-style: italic; font-weight: 400; color: #f3e7c6; }
+  .tagline {
+    margin-top: 18px; max-width: 560px;
+    font-family: Fraunces, serif; font-style: italic; font-weight: 400;
+    font-size: 19.5px; line-height: 1.3; color: #e9efe9;
+  }
+  .tagline b { font-style: normal; font-weight: 600; color: #fff; }
+  .pills { display: flex; gap: 7px; margin-top: 16px; flex-wrap: wrap; max-width: 600px; }
+  .pill {
+    font-size: 9.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: 99px;
+    border: 1px solid rgba(255,184,28,.55); color: var(--gold); background: rgba(0,0,0,.18);
+  }
+  .pill.solid { background: var(--gold); color: var(--green-ink); border-color: var(--gold); }
+
+  /* ---------- BODY ---------- */
+  .body { padding: 2px 44px 0; }
+  .question {
+    display: grid; grid-template-columns: 1fr 1.05fr; gap: 26px; align-items: start;
+  }
+  .question h2 {
+    font-family: Fraunces, serif; font-weight: 600; font-size: 21px; line-height: 1.15;
+    color: var(--green); letter-spacing: -.01em;
+  }
+  .question h2 em { color: var(--gold-ink); font-weight: 600; }
+  .question p { font-size: 10.8px; line-height: 1.5; color: var(--muted); }
+  .question p b { color: var(--ink); font-weight: 600; }
+
+  .label {
+    font-size: 9px; font-weight: 800; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--gold-ink); display: flex; align-items: center; gap: 10px; margin-bottom: 9px;
+  }
+  .label::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  .themes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 14px; }
+  .theme {
+    display: grid; grid-template-columns: 76px 1fr; gap: 11px; align-items: center;
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 7px 12px 7px 7px;
+  }
+  .theme img { width: 76px; height: 46px; object-fit: cover; border-radius: 8px; display: block; }
+  .theme h3 { font-size: 11.6px; font-weight: 700; color: var(--green); line-height: 1.2; }
+  .theme h3 span { font-family: Fraunces, serif; font-style: italic; font-weight: 500; color: var(--gold-ink); margin-right: 4px; }
+  .theme p { font-size: 9.8px; line-height: 1.4; color: var(--muted); margin-top: 3px; }
+
+  .apps { display: flex; align-items: center; gap: 7px; margin-top: 10px; flex-wrap: wrap; }
+  .apps .k { font-size: 9px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-ink); margin-right: 3px; }
+  .chip {
+    font-size: 10px; font-weight: 600; color: var(--green);
+    background: #e6efe9; border-radius: 99px; padding: 4px 10px;
+  }
+
+  .cols { display: grid; grid-template-columns: 1fr 1.12fr; gap: 26px; margin-top: 13px; }
+  .tool { display: flex; flex-direction: column; gap: 7px; }
+  .tool-row { display: grid; grid-template-columns: 18px 1fr; gap: 8px; font-size: 10.4px; line-height: 1.4; color: var(--muted); }
+  .tool-row b { color: var(--ink); font-weight: 650; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; border: 2.5px solid var(--green); margin-top: 3px; }
+  .dot.g { border-color: var(--gold); background: var(--gold); }
+
+  .offer { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 14px; }
+  .o { display: grid; grid-template-columns: 26px 1fr; gap: 9px; }
+  .o .ic {
+    width: 26px; height: 26px; border-radius: 8px; background: var(--green);
+    display: grid; place-items: center;
+  }
+  .o .ic svg { width: 15px; height: 15px; }
+  .o h4 { font-size: 10.8px; font-weight: 700; color: var(--ink); line-height: 1.25; }
+  .o p { font-size: 9.6px; line-height: 1.4; color: var(--muted); margin-top: 2px; }
+
+  .who { margin-top: 10px; border-top: 1px solid var(--line); padding-top: 8px; }
+  .who .q { font-family: Fraunces, serif; font-style: italic; font-size: 14px; color: var(--green); }
+  .disc { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+  .disc span {
+    font-size: 9.4px; font-weight: 600; color: var(--ink);
+    border: 1px solid #cfc7b2; border-radius: 6px; padding: 2px 6px; background: var(--card);
+  }
+
+  .pubs { margin-top: 7px; display: flex; align-items: baseline; gap: 10px; font-size: 9.6px; color: var(--muted); }
+  .pubs .k { font-size: 9px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-ink); white-space: nowrap; }
+  .pubs i { font-family: Fraunces, serif; font-size: 11px; color: var(--ink); font-style: italic; }
+  .pubs .sep { color: #c3b99e; margin: 0 4px; }
+
+  /* ---------- FOOTER / CTA ---------- */
+  .cta {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 150px;
+    background: var(--green); color: #fff;
+    display: grid; grid-template-columns: 1fr 100px; gap: 24px; align-items: center;
+    padding: 0 44px 26px;
+  }
+  .cta::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px;
+    background: var(--gold);
+  }
+  .pi { display: grid; grid-template-columns: 82px 1fr; gap: 18px; align-items: center; }
+  .pi img {
+    width: 82px; height: 82px; border-radius: 50%; object-fit: cover; object-position: 50% 20%;
+    border: 3px solid var(--gold);
+  }
+  .deadline { font-size: 9.5px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+  .cta h2 { font-family: Fraunces, serif; font-weight: 600; font-size: 21px; line-height: 1.15; margin-top: 4px; }
+  .cta .sub { font-size: 10.2px; line-height: 1.45; color: #cfe0d6; margin-top: 4px; }
+  .cta .sub b { color: #fff; font-weight: 600; }
+  .actions { display: flex; align-items: center; gap: 14px; margin-top: 10px; }
+  .btn {
+    background: var(--gold); color: var(--green-ink); font-weight: 800; font-size: 13px;
+    padding: 8px 15px; border-radius: 8px; letter-spacing: .01em;
+  }
+  .apply { font-size: 10px; color: #e6efe9; line-height: 1.35; }
+  .apply b { color: #fff; }
+  .qr { text-align: center; }
+  .qr .box { background: #fff; border-radius: 10px; padding: 8px; width: 100px; height: 100px; }
+  .qr .box img { width: 84px; height: 84px; display: block; }
+  .qr small { display: block; font-size: 8.5px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--gold); margin-top: 6px; }
+  .strip {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 26px; background: var(--green-ink);
+    font-size: 8.5px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+    color: #8fb3a1; display: flex; align-items: center; justify-content: center; gap: 12px;
+  }
+  .strip i { color: var(--gold); font-style: normal; font-size: 6px; }
+  .strip em { font-family: Fraunces, serif; font-style: italic; font-weight: 500; letter-spacing: .02em; text-transform: none; font-size: 11px; color: #e6efe9; }
+  .strip span { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <img class="net" src="hero.svg" alt="">
+  <svg class="land" viewBox="0 0 816 436" font-family="Inter, sans-serif"><g transform="translate(0 -16)">
+    <defs>
+      <marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#FFB81C"/></marker>
+      <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB81C" stop-opacity=".32"/><stop offset="1" stop-color="#FFB81C" stop-opacity="0"/></linearGradient>
+    </defs>
+    <!-- glow behind the unexplored peak -->
+    <path d="M610 426 C650 426 668 268 708 268 C748 268 772 382 816 396 V452 H610z" fill="url(#glow)"/>
+    <!-- back ridge -->
+    <path d="M0 428 C60 428 90 396 160 394 C230 392 250 380 330 370 C410 360 440 392 520 386 C580 380 600 400 640 402 V452 H0z" fill="#ffffff" fill-opacity=".07"/>
+    <!-- the landscape: becomes the poster body -->
+    <path d="M0 444 C45 444 95 392 152 392 C205 392 214 426 252 426 C296 426 300 360 344 360 C388 360 398 414 434 414 C470 414 482 384 520 384 C556 384 572 428 612 428 C652 428 668 270 708 270 C748 270 772 384 816 398 V452 H0z" fill="#F7F3E9"/>
+    <!-- explored ridge line -->
+    <path d="M0 444 C45 444 95 392 152 392 C205 392 214 426 252 426 C296 426 300 360 344 360 C388 360 398 414 434 414 C470 414 482 384 520 384 C556 384 572 428 612 428" fill="none" stroke="#9fc4b0" stroke-width="2.5"/>
+    <!-- unexplored, de novo ridge -->
+    <path d="M612 428 C652 428 668 270 708 270 C748 270 772 384 816 398" fill="none" stroke="#FFB81C" stroke-width="3.5" stroke-dasharray="8 6" stroke-linecap="round"/>
+    <!-- evolution arrow -->
+    <path d="M258 420 C270 398 292 382 322 368" fill="none" stroke="#FFB81C" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#ah)"/>
+    <text x="262" y="446" font-size="9" font-style="italic" fill="#5f7a6c">evolution</text>
+    <!-- peak markers & labels -->
+    <g fill="#ffffff">
+      <circle cx="152" cy="392" r="5"/><circle cx="344" cy="360" r="5"/><circle cx="520" cy="384" r="5"/>
+    </g>
+    <g font-size="8.5" font-weight="700" letter-spacing="1.3" fill="#d5e5dc" text-anchor="middle">
+      <text x="152" y="378">MOLECULAR NETWORKS</text>
+      <text x="344" y="346">CELLS</text>
+      <text x="520" y="370">MICROBIAL COMMUNITIES</text>
+    </g>
+    <!-- star on the new peak -->
+    <path transform="translate(708 268)" d="M0 -15 L4.4 -4.6 L15 -4.6 L6.5 2.2 L9.6 13 L0 6.6 L-9.6 13 L-6.5 2.2 L-15 -4.6 L-4.4 -4.6Z" fill="#FFB81C" stroke="#154734" stroke-width="1.5"/>
+    <text x="708" y="232" text-anchor="middle" font-size="9" font-weight="800" letter-spacing="1.6" fill="#FFB81C">DE NOVO DESIGN</text>
+    <text x="708" y="246" text-anchor="middle" font-size="11" font-family="Fraunces, serif" font-style="italic" fill="#f3e7c6">beyond evolution</text>
+  </g></svg>
+
+  <div class="hero-inner">
+    <div class="eyebrow"><img src="logo.svg" alt="">BioJazz Lab &nbsp;·&nbsp; Department of Biology &nbsp;·&nbsp; Baylor University &nbsp;·&nbsp; Waco, TX</div>
+    <div class="headline">
+      <div class="big-num">1–3</div>
+      <h1>Fully Funded<br><em>PhD Positions</em></h1>
+    </div>
+    <p class="tagline">Uncover the <b>design principles of life</b>, from molecular networks to microbial communities, and use them to design what evolution never tried.</p>
+    <div class="pills">
+      <span class="pill solid">Start Fall 2027</span>
+      <span class="pill">Stipend + tuition + health</span>
+      <span class="pill">Founding cohort</span>
+      <span class="pill">Wet + dry lab</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BODY ================= -->
+<main class="body">
+  <div class="question">
+    <h2>Why are living systems built the way they are, and <em>how can we design new ones?</em></h2>
+    <p>We use microbes as tractable, fast-evolving model systems. We pair <b>multi-omics</b> (transcriptomics, proteomics, metabolomics, and other phenomics) with <b>mechanistic yet data-constrained virtual cell models</b>, and use AI and automation to speed up the whole cycle from model to experiment.</p>
+  </div>
+
+  <div class="themes">
+    <div class="theme"><img src="research/cell-physiology.svg" alt=""><div><h3><span>01</span>Cell Physiology &amp; Communities</h3><p>How cells allocate limited resources, and how those choices shape microbial communities.</p></div></div>
+    <div class="theme"><img src="research/predictive-phenomics.svg" alt=""><div><h3><span>02</span>Predictive Phenomics</h3><p>Predict how cells respond to genetic, environmental, and drug perturbations.</p></div></div>
+    <div class="theme"><img src="research/evolutionary-systems.svg" alt=""><div><h3><span>03</span>Evolutionary Systems &amp; Synthetic Biology</h3><p>Evolve cellular networks <i>in silico</i> with BioJazz, then design beyond evolution.</p></div></div>
+    <div class="theme"><img src="research/ai-for-biology.svg" alt=""><div><h3><span>04</span>AI for Biology</h3><p>AI tools linking proteomics to protein structure and function, at scale.</p></div></div>
+  </div>
+
+  <div class="apps">
+    <span class="k">Impact</span>
+    <span class="chip">Aging &amp; Disease</span>
+    <span class="chip">Infection &amp; Immunity</span>
+    <span class="chip">Bioeconomy</span>
+    <span class="chip">One Health</span>
+  </div>
+
+  <div class="cols">
+    <div>
+      <div class="label">Skills you'll build</div>
+      <div class="tool">
+        <div class="tool-row"><span class="dot"></span><span><b>Multi-omics</b> experiments &amp; data analysis</span></div>
+        <div class="tool-row"><span class="dot"></span><span><b>Virtual cell models</b>: mechanistic, data-constrained</span></div>
+        <div class="tool-row"><span class="dot"></span><span><b><i>In silico</i> evolution</b> &amp; rule-based modeling</span></div>
+        <div class="tool-row"><span class="dot g"></span><span><b>AI, automation &amp; scientific software</b></span></div>
+      </div>
+      <div class="who">
+        <div class="q">Curiosity matters more than background.</div>
+        <div class="disc"><span>Biology</span><span>Physics</span><span>Chemistry</span><span>Math</span><span>CS</span><span>Engineering</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="label">What we offer</div>
+      <div class="offer">
+        <div class="o"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FFB81C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6.5c-1-1.3-2.8-2-5-2-2.8 0-4.5 1.4-4.5 3.3 0 4.7 9.6 2.4 9.6 7.4 0 2-2 3.6-5 3.6-2.4 0-4.4-.9-5.4-2.4"/></svg></div><div><h4>Full funding</h4><p>Stipend, tuition, and health insurance throughout the PhD.</p></div></div>
+        <div class="o"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FFB81C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6-5.3-3-5.3 3 1.2-6L3.4 9.3l6-.7z"/></svg></div><div><h4>Founding member</h4><p>Shape the lab's projects, tools, and culture from day one.</p></div></div>
+        <div class="o"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FFB81C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.3-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 010 7M18 14.8c2 .8 3.2 2.6 3.5 5.2"/></svg></div><div><h4>Close mentorship</h4><p>One-on-one training with the PI in a small, supportive team.</p></div></div>
+        <div class="o"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#FFB81C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="5" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M7.3 10.9l9.4-4.8M7.3 13.1l9.4 4.8"/></svg></div><div><h4>Wide network</h4><p>Clinical &amp; national-lab partners; PI formerly at PNNL &amp; LANL.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ================= CTA ================= -->
+<footer class="cta">
+  <div class="pi">
+    <img src="feng.jpg" alt="Dr. Song Feng">
+    <div>
+      <div class="deadline">Apply by December 1, 2026 &nbsp;·&nbsp; Start Fall 2027</div>
+      <h2>Email Dr. Song Feng before you apply</h2>
+      <p class="sub">Send a short note on your interests and your CV, then apply to the <b>Baylor Biology PhD program</b> and name the BioJazz Lab in your application.</p>
+      <div class="actions">
+        <span class="btn">Song_Feng@baylor.edu</span>
+        <span class="apply">biojazz-lab.github.io/join</span>
+      </div>
+    </div>
+  </div>
+  <div class="qr">
+    <div class="box"><img src="qr.svg" alt="QR code to biojazz-lab.github.io/join"></div>
+    <small>Scan for details</small>
+  </div>
+  <div class="strip"><span>Recent work in</span> <em>Science Advances</em> <i>●</i> <em>PRX Life</em> <i>●</i> <em>Protein Science</em> <i>●</i> <em>Cell Reports Methods</em> <i>●</i> <em>Nucleic Acids Research</em></div>
+</footer>
+
+</body>
+</html>

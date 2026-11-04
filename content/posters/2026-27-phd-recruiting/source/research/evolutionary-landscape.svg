@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 440" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<defs>
+<linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eaf2ed"/><stop offset="1" stop-color="#d3e4da"/></linearGradient>
+<marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#FFB81C"/></marker>
+</defs>
+<rect width="560" height="440" rx="18" fill="url(#b)"/>
+
+<!-- back ridge, for depth -->
+<path d="M40 300 C110 300 130 215 190 215 C250 215 265 245 320 220 C375 195 400 205 440 190 C480 175 510 200 530 205 V380 H40z" fill="#c3d9cb" fill-opacity=".6"/>
+
+<!-- the part of the landscape evolution has not explored (de novo design) -->
+<path d="M420 260 C445 260 455 70 480 70 C505 70 515 220 530 240 V380 H420z" fill="#FFB81C" fill-opacity=".14"/>
+<path d="M420 260 C445 260 455 70 480 70 C505 70 515 220 530 240" fill="none" stroke="#FFB81C" stroke-width="4" stroke-dasharray="9 7" stroke-linecap="round"/>
+
+<!-- explored landscape -->
+<path d="M40 340 C80 340 95 200 120 200 C145 200 155 270 180 270 C210 270 220 120 250 120 C280 120 290 250 312 250 C340 250 345 165 370 165 C395 165 400 260 420 260 V380 H40z" fill="#ffffff"/>
+<path d="M40 340 C80 340 95 200 120 200 C145 200 155 270 180 270 C210 270 220 120 250 120 C280 120 290 250 312 250 C340 250 345 165 370 165 C395 165 400 260 420 260" fill="none" stroke="#1f5c45" stroke-width="4" stroke-linejoin="round"/>
+<!-- contour hints -->
+<g fill="none" stroke="#1f5c45" stroke-opacity=".18" stroke-width="2">
+<path d="M92 300 C105 255 112 240 120 240 C135 245 150 295 180 300 C215 298 225 175 250 165 C275 175 285 280 312 285 C335 282 350 210 370 205 C390 210 400 285 418 292"/>
+<path d="M108 320 C114 295 116 285 120 285 C128 290 150 325 180 330 C220 325 235 230 250 215 C265 230 285 315 312 318 C340 315 355 255 370 250 C385 255 400 312 418 322"/>
+</g>
+
+<!-- an evolutionary path climbing a peak -->
+<circle cx="180" cy="270" r="5" fill="#FFB81C"/>
+<path d="M170 256 C184 240 198 160 226 126" fill="none" stroke="#FFB81C" stroke-width="4" stroke-dasharray="2 8" stroke-linecap="round" marker-end="url(#ah)"/>
+<text x="182" y="306" font-size="14" font-style="italic" fill="#1f5c45" text-anchor="middle">evolution</text>
+
+<!-- systems sitting at different peaks -->
+<g stroke="#1f5c45" stroke-width="2" stroke-dasharray="3 4">
+<line x1="105" y1="132" x2="118" y2="190"/><line x1="250" y1="84" x2="250" y2="110"/><line x1="375" y1="126" x2="371" y2="155"/></g>
+<g fill="#154734"><circle cx="120" cy="200" r="8"/><circle cx="250" cy="120" r="8"/><circle cx="370" cy="165" r="8"/></g>
+<path d="M480 56 l4.7 9.6 10.6 1.5 -7.7 7.5 1.8 10.5 -9.4 -5 -9.4 5 1.8 -10.5 -7.7 -7.5 10.6 -1.5z" fill="#FFB81C" stroke="#154734" stroke-width="1.5" stroke-linejoin="round"/>
+
+<!-- molecular network -->
+<g stroke="#1f5c45" stroke-width="2.5"><line x1="88" y1="112" x2="112" y2="98"/><line x1="112" y1="98" x2="120" y2="124"/><line x1="88" y1="112" x2="120" y2="124"/></g>
+<g fill="#154734"><circle cx="88" cy="112" r="6"/><circle cx="120" cy="124" r="6"/></g><circle cx="112" cy="98" r="7" fill="#FFB81C"/>
+<text x="104" y="62" font-size="15" font-weight="600" fill="#154734" text-anchor="middle">Molecular</text>
+<text x="104" y="80" font-size="15" font-weight="600" fill="#154734" text-anchor="middle">network</text>
+
+<!-- cell -->
+<rect x="220" y="54" width="60" height="30" rx="15" fill="#ffffff" stroke="#1f5c45" stroke-width="3"/>
+<g fill="#154734"><circle cx="238" cy="69" r="4"/><circle cx="252" cy="64" r="4"/></g><circle cx="264" cy="72" r="4.5" fill="#FFB81C"/>
+<text x="250" y="42" font-size="15" font-weight="600" fill="#154734" text-anchor="middle">Cell</text>
+
+<!-- microbial community -->
+<g fill="#ffffff" stroke="#1f5c45" stroke-width="2.5">
+<rect x="350" y="102" width="30" height="16" rx="8"/><rect x="372" y="94" width="30" height="16" rx="8" transform="rotate(-20 387 102)"/><rect x="362" y="114" width="30" height="16" rx="8" transform="rotate(15 377 122)"/>
+</g>
+<text x="377" y="64" font-size="15" font-weight="600" fill="#154734" text-anchor="middle">Microbial</text>
+<text x="377" y="82" font-size="15" font-weight="600" fill="#154734" text-anchor="middle">community</text>
+
+<!-- designed systems -->
+<text x="482" y="28" font-size="15" font-weight="600" fill="#154734" text-anchor="middle">De novo design</text>
+<text x="482" y="46" font-size="13" font-style="italic" fill="#1f5c45" text-anchor="middle">beyond evolution</text>
+
+<!-- axes -->
+<g fill="none" stroke="#154734" stroke-width="2.5" stroke-linecap="round"><path d="M40 380 H535"/><path d="M40 380 V110"/></g>
+<path d="M535 380 l-9 -5 v10z M40 110 l-5 9 h10z" fill="#154734"/>
+<text x="288" y="410" font-size="15" fill="#154734" text-anchor="middle">Genotype / design space</text>
+<text transform="translate(26 250) rotate(-90)" font-size="15" fill="#154734" text-anchor="middle">Fitness</text>
+</svg>

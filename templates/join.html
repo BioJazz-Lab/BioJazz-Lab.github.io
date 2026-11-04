@@ -1,0 +1,11 @@
+{#- Join Us page: like about.html, plus the recruiting posters where the content has <!-- posters -->. -#}
+{% extends "base.html" %}
+{% block content %}
+  <article class="prose mx-auto">
+    <h1 class="text-3xl font-bold mt-4 mb-2">{{ page.title }}</h1>
+    {%- for part in page.content | split(pat="<!-- posters -->") %}
+    {%- if not loop.first %}{% include "partials/posters.html" %}{% endif %}
+    {{ part | safe }}
+    {%- endfor %}
+  </article>
+{% endblock content %}

@@ -1,0 +1,24 @@
+{#-
+  Recruiting posters from content/posters/, each shown as a preview image linked
+  to its PDF. Only posters from the newest academic year are shown.
+  Used by join.html, which puts this where the page has <!-- posters -->.
+-#}
+{%- set section = get_section(path="posters/_index.md") %}
+{%- set posters = section.pages %}
+{%- if posters %}
+{%- set latest_year = posters[0].extra.academic_year %}
+<div class="bj-posters grid gap-6 sm:grid-cols-2 my-6">
+{%- for p in posters %}
+{%- if p.extra.academic_year == latest_year %}
+{%- set dir = p.colocated_path %}
+<figure class="bj-card">
+<a href="{{ get_url(path=dir ~ p.extra.pdf) }}" target="_blank" rel="noopener"><img src="{{ get_url(path=dir ~ p.extra.image) }}" alt="{{ p.title }}, {{ p.extra.academic_year }}" class="w-full h-auto" loading="lazy"></a>
+<figcaption class="p-4">
+<p class="bj-eyebrow">{{ p.extra.academic_year }} · {{ p.extra.audience }}</p>
+<a class="bj-btn mt-3" href="{{ get_url(path=dir ~ p.extra.pdf) }}" target="_blank" rel="noopener">Download PDF</a>
+</figcaption>
+</figure>
+{%- endif %}
+{%- endfor %}
+</div>
+{%- endif %}

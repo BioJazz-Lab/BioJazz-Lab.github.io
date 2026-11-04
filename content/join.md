@@ -1,6 +1,6 @@
 +++
 title = "Join Us"
-template = "about.html"
+template = "join.html"
 description = "Open positions in the BioJazz Lab at Baylor University: graduate students, postdocs, and undergraduate researchers."
 +++
 
@@ -16,6 +16,8 @@ Prospective Ph.D. students should apply through the
 [Baylor Biology graduate program](https://biology.artsandsciences.baylor.edu/graduate-biology-programs)
 and mention the BioJazz Lab in their application. Feel free to email Dr. Feng
 before applying to discuss research interests.
+
+<!-- posters -->
 
 ## Postdoctoral researchers
 
