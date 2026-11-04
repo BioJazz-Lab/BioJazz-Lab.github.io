@@ -19,6 +19,10 @@ feed_filenames = ["atom.xml"]
 smart_punctuation = true
 external_links_target_blank = true
 
+[link_checker]
+# MDPI (DOI prefix 10.3390) answers automated checkers with 403 Forbidden; the links work in a browser.
+skip_prefixes = ["https://doi.org/10.3390/"]
+
 [extra]
 # --- Identity -----------------------------------------------------------------
 lab_subtitle = "Department of Biology · Baylor University"
