@@ -18,8 +18,8 @@ but why they work the way they do: how evolution shapes them under biophysical
 and biochemical constraints, what design principles it discovers, and how we
 can use those principles to go beyond what evolution has explored.
 
-In practice, we pair multi-omics measurements, such as proteomics and
-metabolomics, with computational modeling. A central goal is to build
+In practice, we pair multi-omics measurements, such as transcriptomics,
+proteomics, metabolomics, and other phenomics, with computational modeling. A central goal is to build
 **mechanistic yet data-constrained virtual cell models** that capture these
 principles and put them to work in designing biological systems, including
 microbial communities. We also use AI and automation to build models, tools,

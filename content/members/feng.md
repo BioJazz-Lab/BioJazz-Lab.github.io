@@ -30,8 +30,8 @@ dynamics, evolution, control, and design. The ultimate goal is to uncover the
 evolutionary design principles of biological systems and use them to guide
 de novo design and systematic control.
 
-Song’s lab combines multi-omics approaches, such as proteomics and
-metabolomics, with mechanistic yet data-constrained modeling, from virtual
+Song’s lab combines multi-omics approaches, such as transcriptomics,
+proteomics, metabolomics, and other phenomics, with mechanistic yet data-constrained modeling, from virtual
 cell models to *in silico* evolution. The work spans four themes: cell
 physiology and communities, predictive phenomics, evolutionary systems and
 synthetic biology, and AI for biology, with applications to aging and age-related disease,

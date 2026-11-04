@@ -8,8 +8,8 @@ members = ["feng", "zjohnson"]
 +++
 
 Cells must divide limited resources among growth, maintenance, and responses to
-a changing environment. We combine multi-omics measurements, such as proteomics
-and metabolomics, with **mechanistic yet data-constrained virtual cell models**
+a changing environment. We combine multi-omics measurements, such as
+transcriptomics, proteomics, metabolomics, and other phenomics, with **mechanistic yet data-constrained virtual cell models**
 to capture these trade-offs quantitatively, from the regulation of single
 enzymes to whole-cell metabolism, and use them to understand how microbial
 communities assemble and how they can be designed.
